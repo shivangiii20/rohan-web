@@ -1,8 +1,262 @@
+import React from "react";
+import { Box, Container, Typography, Grid } from "@mui/material";
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import seopoints from "../animation/seopoints.json";
+import {
+  Search,
+  Group,
+  TrendingUp,
+  PhoneIphone,
+  Stars,
+  EmojiEmotions,
+  GpsFixed,
+  MonetizationOn,
+} from "@mui/icons-material";
+
 const SeoOptimization = () => {
-   return(
-          <>
-            <h3>Welcome SEO Optimization</h3>
-          </>
-   );
-}
+  return (
+    <>
+      {/* Hero Section with Background Image */}
+      <Box
+        sx={{
+          minHeight: "100vh",
+          width: "100%",
+          backgroundImage: "url('/images/seoim.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          px: { xs: 2, md: 6 },
+        }}
+      >
+        <Container maxWidth="lg"></Container>
+      </Box>
+
+      {/* Scrolling SEO Footer Strip */}
+      <Box
+        sx={{
+          width: "100%",
+          background: "linear-gradient(to right, #ca63e9ff, #73cde9ff)",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          py: 6,
+        }}
+      >
+        <Box
+          sx={{
+            display: "inline-block",
+            animation: "scroll-left 40s linear infinite",
+          }}
+        >
+          <Typography
+            variant="body1"
+            sx={{
+              display: "inline-block",
+              color: "#fff",
+              fontWeight: 500,
+              fontSize: "1.1rem",
+              px: 4,
+            }}
+          >
+            🔍 On-Page SEO &nbsp; • &nbsp; 📝 Content Optimization &nbsp; • &nbsp;
+            🛠️ Technical SEO Audit &nbsp; • &nbsp; ✍️ Blog Posting &nbsp; • &nbsp;
+            🔗 High-Quality Backlinks &nbsp; • &nbsp; 🚀 Mobile Optimization &nbsp; • &nbsp;
+            📈 Google Ranking Boost &nbsp; • &nbsp; 🎯 Keyword Research &nbsp; • &nbsp;
+            🌐 Local SEO Services
+          </Typography>
+        </Box>
+      </Box>
+      <style>
+        {`
+          @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+        `}
+      </style>
+
+      {/* Text and Lottie Section */}
+      <Box sx={{ width: "100%", backgroundColor: "#f9f9f9", py: { xs: 6, md: 10 }, px: { xs: 2, md: 6 } }}>
+        <Container maxWidth="lg">
+          <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 6 }}>
+            <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+              <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { xs: "2rem", md: "2.8rem" }, color: "#333", mb: 2 }}>
+                Our SEO Optimization Strategy
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: "1.15rem", color: "#555", maxWidth: "800px", marginX: { xs: "auto", md: 0 } }}>
+                We help your website rank higher on Google through smart keyword research, on-page and off-page optimization, content strategies, and powerful backlinks.
+              </Typography>
+            </Box>
+            <Box sx={{ flex: 1, display: "flex", justifyContent: "center", maxWidth: 400 }}>
+              <Lottie animationData={seopoints} loop={true} />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* Feature Cards */}
+      <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: "white" }}>
+        <Container maxWidth="lg">
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr 1fr" },
+              gap: 4,
+            }}
+          >
+            {[
+              { icon: <Search fontSize="large" />, title: "Local SEO" },
+              { icon: <Group fontSize="large" />, title: "Real Audience" },
+              { icon: <TrendingUp fontSize="large" />, title: "Organic Traffic" },
+              { icon: <PhoneIphone fontSize="large" />, title: "Mobile Optimization" },
+              { icon: <Stars fontSize="large" />, title: "Google Ranking" },
+              { icon: <EmojiEmotions fontSize="large" />, title: "Better UX" },
+              { icon: <GpsFixed fontSize="large" />, title: "Keyword Targeting" },
+              { icon: <MonetizationOn fontSize="large" />, title: "Affordable Price" },
+            ].map((card, index) => (
+              <Box
+                key={index}
+                sx={{
+                  background: "linear-gradient(135deg, #7a4ecc, #58a5c9)",
+                  color: "white",
+                  p: 3,
+                  borderRadius: 3,
+                  textAlign: "center",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  cursor: "pointer",
+                  "&:hover": {
+                    transform: "translateY(-6px)",
+                    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                <Box sx={{ mb: 1 }}>{card.icon}</Box>
+                <Box sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{card.title}</Box>
+              </Box>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+      {/* Low Cost SEO Plans Section */}
+<Box sx={{ py: 10, backgroundColor: "#f5f7fa" }}>
+  <Container>
+    <Typography
+      variant="h4"
+      fontWeight="bold"
+      textAlign="center"
+      sx={{ mb: 6 }}
+    >
+      Low Cost SEO Plans
+    </Typography>
+
+    {/* 4 Plan Cards */}
+    <Grid
+      container
+      spacing={{ xs: 3, md: 5 }}
+      justifyContent="center"
+      alignItems="stretch"
+    >
+      {["Basic Plan", "Starter Plan", "Business Plan", "Pro Plan"].map(
+        (title, i) => (
+          <Grid item xs={12} sm={6} md={3} key={i}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Box
+                sx={{
+                  background: "linear-gradient(135deg, #7b2ff7, #22c1c3)",
+                  color: "#fff",
+                  borderRadius: 4,
+                  p: 4,
+                  textAlign: "center",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-8px)",
+                  },
+                }}
+              >
+                <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
+                  {title}
+                </Typography>
+                <Box
+                  component="button"
+                  sx={{
+                    backgroundColor: "#fff",
+                    color: "#333",
+                    border: "none",
+                    px: 3,
+                    py: 1,
+                    borderRadius: 2,
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                  }}
+                >
+                  Order Now
+                </Box>
+              </Box>
+            </motion.div>
+
+            {/* Feature Cards Under Each Plan */}
+            {i === 0 && (
+              <Box
+                sx={{
+                  mt: 3,
+                  backgroundColor: "#fff",
+                  borderRadius: 3,
+                  boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+                  p: 3,
+                }}
+              >
+                {[
+                  "5 Keyword SEO",
+                  "Keyword Research",
+                  "5 On-Page SEO",
+                  "Meta Tags Optimization",
+                  "Internal Linking",
+                  "H Tags Optimization",
+                  "URL Structure Optimization",
+                  "SEO Audit Report",
+                  "Sitemap Submission",
+                  "Robots Optimization",
+                  "Alt Text for Images",
+                  "Canonical Tags",
+                ].map((feature, idx, arr) => (
+                  <Typography
+                    key={idx}
+                    variant="body2"
+                    sx={{
+                      borderBottom:
+                        idx !== arr.length - 1 ? "1px dashed #ddd" : "none",
+                      pb: 1,
+                      mb: 1,
+                      fontSize: "0.95rem",
+                      color: "#333",
+                    }}
+                  >
+                    {feature}
+                  </Typography>
+                ))}
+              </Box>
+            )}
+          </Grid>
+        )
+      )}
+    </Grid>
+  </Container>
+</Box>
+
+
+      
+    </>
+  );
+};
+
 export default SeoOptimization;

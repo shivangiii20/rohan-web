@@ -132,7 +132,7 @@ const WebsiteDesign = () => {
       </Box>
 
       {/* Lottie Animation Section */}
-     {/* Olycoder-style Animation + Text Section */}
+      {/* Olycoder-style Animation + Text Section */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -255,7 +255,6 @@ const WebsiteDesign = () => {
           </Grid>
         </Container>
       </Box>
-
 
       {/* Website Features Section */}
       <Box
@@ -557,39 +556,39 @@ const WebsiteDesign = () => {
                     </Box>
                   )}
 
-                  { i === 2 && (
-  <Box
-    sx={{
-      mt: 3,
-      backgroundColor: "#fff",
-      borderRadius: 3,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
-      p: 3,
-    }}
-  >
-    {[
-      "Live Chat | Whatsapp Chat",
-      "Payment Gateway Integration",
-      "1 Year Free Support",
-      "3 Free Update After Delivery",
-    ].map((feature, idx) => (
-      <Typography
-        key={idx}
-        variant="body2"
-        sx={{
-          borderBottom: idx !== 3 ? "1px dashed #ddd" : "none",
-          pb: 1,
-          mb: 1,
-          fontSize: "0.95rem",
-          color: "#333",
-        }}
-      >
-        {feature}
-      </Typography>
-    ))}
-  </Box>
-)}
-
+                  {i === 2 && (
+                    <Box
+                      sx={{
+                        mt: 3,
+                        backgroundColor: "#fff",
+                        borderRadius: 3,
+                        boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+                        p: 3,
+                      }}
+                    >
+                      {[
+                        "Live Chat | Whatsapp Chat",
+                        "Payment Gateway Integration",
+                        "1 Year Free Support",
+                        "3 Free Update After Delivery",
+                      ].map((feature, idx) => (
+                        <Typography
+                          key={idx}
+                          variant="body2"
+                          sx={{
+                            borderBottom:
+                              idx !== 3 ? "1px dashed #ddd" : "none",
+                            pb: 1,
+                            mb: 1,
+                            fontSize: "0.95rem",
+                            color: "#333",
+                          }}
+                        >
+                          {feature}
+                        </Typography>
+                      ))}
+                    </Box>
+                  )}
 
                   {i === 3 && (
                     <Box
@@ -629,82 +628,172 @@ const WebsiteDesign = () => {
                       ))}
                     </Box>
                   )}
-  
-          { i === 3 && (
-  <Box
-    sx={{
-      mt: 3,
-      backgroundColor: "#fff",
-      borderRadius: 3,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
-      p: 3,
-    }}
-  >
-    {[
-      "Live Chat | Whatsapp Chat",
-      "Payment Gateway Integration",
-      "1 Year Free Support",
-      "5 Free Update After Delivery",
-    ].map((feature, idx) => (
-      <Typography
-        key={idx}
-        variant="body2"
-        sx={{
-          borderBottom: idx !== 3 ? "1px dashed #ddd" : "none",
-          pb: 1,
-          mb: 1,
-          fontSize: "0.95rem",
-          color: "#333",
-        }}
-      >
-        {feature}
-      </Typography>
-    ))}
-  </Box>
-)}
 
+                  {i === 3 && (
+                    <Box
+                      sx={{
+                        mt: 3,
+                        backgroundColor: "#fff",
+                        borderRadius: 3,
+                        boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+                        p: 3,
+                      }}
+                    >
+                      {[
+                        "Live Chat | Whatsapp Chat",
+                        "Payment Gateway Integration",
+                        "1 Year Free Support",
+                        "5 Free Update After Delivery",
+                      ].map((feature, idx) => (
+                        <Typography
+                          key={idx}
+                          variant="body2"
+                          sx={{
+                            borderBottom:
+                              idx !== 3 ? "1px dashed #ddd" : "none",
+                            pb: 1,
+                            mb: 1,
+                            fontSize: "0.95rem",
+                            color: "#333",
+                          }}
+                        >
+                          {feature}
+                        </Typography>
+                      ))}
+                    </Box>
+                  )}
 
-{ i === 3 && (
-  <Box
-    sx={{
-      mt: 3,
-      backgroundColor: "#fff",
-      borderRadius: 3,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
-      p: 3,
-    }}
-  >
-    {[
-      "Basic OnPage SEO",
-      "Free .com or .in Domain",
-      "Poweful Admin Panel",
-      "2x More Faster Website",
-    ].map((feature, idx) => (
-      <Typography
-        key={idx}
-        variant="body2"
-        sx={{
-          borderBottom: idx !== 3 ? "1px dashed #ddd" : "none",
-          pb: 1,
-          mb: 1,
-          fontSize: "0.95rem",
-          color: "#333",
-        }}
-      >
-        {feature}
-      </Typography>
-    ))}
-  </Box>
-)}
-
-
-
-
-
+                  {i === 3 && (
+                    <Box
+                      sx={{
+                        mt: 3,
+                        backgroundColor: "#fff",
+                        borderRadius: 3,
+                        boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+                        p: 3,
+                      }}
+                    >
+                      {[
+                        "Basic OnPage SEO",
+                        "Free .com or .in Domain",
+                        "Poweful Admin Panel",
+                        "2x More Faster Website",
+                      ].map((feature, idx) => (
+                        <Typography
+                          key={idx}
+                          variant="body2"
+                          sx={{
+                            borderBottom:
+                              idx !== 3 ? "1px dashed #ddd" : "none",
+                            pb: 1,
+                            mb: 1,
+                            fontSize: "0.95rem",
+                            color: "#333",
+                          }}
+                        >
+                          {feature}
+                        </Typography>
+                      ))}
+                    </Box>
+                  )}
                 </Grid>
               )
             )}
           </Grid>
+        </Container>
+      </Box>
+
+      {/* EXTRA SERVICES SECTION */}
+      <Box
+        sx={{
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, md: 0 },
+          backgroundColor: "#f7f9fc",
+          mt: 8, // adds space after plans
+        }}
+      >
+        <Container maxWidth="lg">
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            sx={{
+              textAlign: "center",
+              mb: 6,
+              fontSize: { xs: "2rem", md: "2.6rem" },
+            }}
+          >
+            Extra Web Services
+          </Typography>
+
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              gap: 4,
+            }}
+          >
+            {[
+              {
+                title: "Social Media Setup",
+                description:
+                  "We create and optimize your FB, Insta & LinkedIn profiles.",
+              },
+              {
+                title: "Content Writing",
+                description:
+                  "SEO-friendly, engaging content tailored to your industry.",
+              },
+              {
+                title: "Premium Stock Images",
+                description:
+                  "Access to high-quality visuals that enhance your brand.",
+              },
+              {
+                title: "Basic Video Animation",
+                description: "Intro/outro videos for homepage or social media.",
+              },
+            ].map((service, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                style={{
+                  flex: "1 1 calc(24% - 24px)", // 4 in row, minus gap
+                  minWidth: "260px",
+                }}
+              >
+                <Box
+                  sx={{
+                    background: "linear-gradient(135deg, #6a11cb, #2575fc)",
+                    borderRadius: 4,
+                    p: 4,
+                    color: "#fff",
+                    textAlign: "center",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+                    transition: "all 0.3s ease",
+                    height: { xs: 230, md: 260 },
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    "&:hover": {
+                      transform: "translateY(-10px) scale(1.05)",
+                      boxShadow: "0 12px 32px rgba(0,0,0,0.25)",
+                    },
+                  }}
+                >
+                  <Typography variant="h6" fontWeight="bold" mb={1}>
+                    {service.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                    {service.description}
+                  </Typography>
+                </Box>
+              </motion.div>
+            ))}
+          </Box>
         </Container>
       </Box>
     </>
