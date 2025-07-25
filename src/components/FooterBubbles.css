@@ -1,0 +1,30 @@
+.footer-bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-bubble {
+  position: absolute;
+  bottom: -30px;
+   background-color: rgb(250, 245, 245); /* ✅ Dark translucent bubbles */
+  border-radius: 50%;
+  filter: blur(1px); /* Optional: gives it a soft glow */
+  animation: footerRise infinite linear;
+}
+
+@keyframes footerRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600%) scale(1.3);
+    opacity: 0;
+  }
+}

@@ -25,6 +25,14 @@ import {
   Brightness7,
 } from '@mui/icons-material';
 import { Link, useNavigate } from 'react-router-dom';
+import {
+  DesignServices,
+  TrendingUp,
+  ShoppingCart,
+  Campaign,
+  Android,
+  Brush,
+} from '@mui/icons-material';
 
 const Navbar = ({ toggleTheme, mode }) => {
   const navigate = useNavigate();
@@ -96,19 +104,63 @@ const Navbar = ({ toggleTheme, mode }) => {
               >
                 Services
               </Button>
-              <Menu
-                anchorEl={anchorElServices}
-                open={Boolean(anchorElServices)}
-                onClose={handleCloseServices}
-                MenuListProps={{ sx: { background: mode === 'dark' ? '#333' : '#fff' } }}
-              >
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/website-designing'); }}>Website Designing</MenuItem>
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/seo-optimization'); }}>SEO Optimization</MenuItem>
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/ecommerce-website'); }}>E-Commerce Website</MenuItem>
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/digital-marketing'); }}>Digital Marketing</MenuItem>
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/android-app-development'); }}>Android App Development</MenuItem>
-                <MenuItem onClick={() => { handleCloseServices(); navigate('/graphic-designing'); }}>Graphic Designing</MenuItem>
-              </Menu>
+             <Menu
+  anchorEl={anchorElServices}
+  open={Boolean(anchorElServices)}
+  onClose={handleCloseServices}
+  MenuListProps={{
+    sx: {
+      background: 'linear-gradient(135deg, #7f00ff, #e100ff)',
+      color: '#fff',
+      px: 1,
+       width: { xs: 220, sm: 240, md: 260, lg: 300 }, // width adjusts by screen size
+    },
+  }}
+>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/website-designing'); }}
+    sx={{ gap: 1 }}
+  >
+    <DesignServices sx={{ fontSize: 20 }} />
+    Website Designing
+  </MenuItem>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/seo-optimization'); }}
+    sx={{ gap: 1 }}
+  >
+    <TrendingUp sx={{ fontSize: 20 }} />
+    SEO Optimization
+  </MenuItem>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/ecommerce-website'); }}
+    sx={{ gap: 1 }}
+  >
+    <ShoppingCart sx={{ fontSize: 20 }} />
+    E-Commerce Website
+  </MenuItem>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/digital-marketing'); }}
+    sx={{ gap: 1 }}
+  >
+    <Campaign sx={{ fontSize: 20 }} />
+    Digital Marketing
+  </MenuItem>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/android-app-development'); }}
+    sx={{ gap: 1 }}
+  >
+    <Android sx={{ fontSize: 20 }} />
+    Android App Development
+  </MenuItem>
+  <MenuItem
+    onClick={() => { handleCloseServices(); navigate('/graphic-designing'); }}
+    sx={{ gap: 1 }}
+  >
+    <Brush sx={{ fontSize: 20 }} />
+    Graphic Designing
+  </MenuItem>
+</Menu>
+
 
               <Button color="inherit" component={Link} to="/portfolio">Portfolio</Button>
               <Button color="inherit" component={Link} to="/contact">Contact</Button>
@@ -134,28 +186,46 @@ const Navbar = ({ toggleTheme, mode }) => {
               {sidebarServicesOpen ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             <Collapse in={sidebarServicesOpen} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding>
+              <List component="div" disablePadding
+               sx={{
+      background: 'linear-gradient(135deg, #7f00ff, #e100ff)',
+      color: '#fff',
+      borderRadius: 1,
+      mt: 1,
+      mb: 2,
+      py: 1,
+    }}
+              >
                 {[
-                  { text: 'Website Designing', path: '/website-designing' },
-                  { text: 'SEO Optimization', path: '/seo-optimization' },
-                  { text: 'E-Commerce Website', path: '/ecommerce-website' },
-                  { text: 'Digital Marketing', path: '/digital-marketing' },
-                  { text: 'Android App Development', path: '/android-app-development' },
-                  { text: 'Graphic Designing', path: '/graphic-designing' },
-                ].map(({ text, path }) => (
-                  <ListItem
-                    key={path}
-                    button
-                    onClick={() => {
-                      toggleDrawer();
-                      navigate(path);
-                    }}
-                  >
-                    <ListItemText primary={text} />
-                  </ListItem>
-                ))}
-              </List>
-            </Collapse>
+      { text: 'Website Designing', path: '/website-designing', icon: <DesignServices sx={{ fontSize: 20, mr: 1 }} /> },
+      { text: 'SEO Optimization', path: '/seo-optimization', icon: <TrendingUp sx={{ fontSize: 20, mr: 1 }} /> },
+      { text: 'E-Commerce Website', path: '/ecommerce-website', icon: <ShoppingCart sx={{ fontSize: 20, mr: 1 }} /> },
+      { text: 'Digital Marketing', path: '/digital-marketing', icon: <Campaign sx={{ fontSize: 20, mr: 1 }} /> },
+      { text: 'Android App Development', path: '/android-app-development', icon: <Android sx={{ fontSize: 20, mr: 1 }} /> },
+      { text: 'Graphic Designing', path: '/graphic-designing', icon: <Brush sx={{ fontSize: 20, mr: 1 }} /> },
+    ].map(({ text, path, icon }) => (
+      <ListItem
+        key={path}
+        button
+        onClick={() => {
+          toggleDrawer();
+          navigate(path);
+        }}
+        sx={{
+          pl: 3,
+          py: 1,
+          '&:hover': {
+            background: 'rgba(255, 255, 255, 0.1)',
+          },
+        }}
+      >
+        {icon}
+        <ListItemText primary={text} />
+      </ListItem>
+    ))}
+  </List>
+</Collapse>
+                  
 
             <ListItem button component={Link} to="/portfolio" onClick={toggleDrawer}>
               <ListItemText primary="Portfolio" />

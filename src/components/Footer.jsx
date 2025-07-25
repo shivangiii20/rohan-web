@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Typography, Link as MuiLink, Stack, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
-import BackgroundBubbles from './BackgroundBubbles';
+import FooterBubbles from './FooterBubbles'; // Import correctly
 
 const Footer = () => {
-  <BackgroundBubbles/>
+  
   return (
     <Box
       sx={{
@@ -13,8 +13,13 @@ const Footer = () => {
         py: 6,
         mt: 8,
         textAlign: 'center',
+         position: 'relative',
+          overflow: 'visible', // Ensures bubbles stay within
       }}
     >
+
+<FooterBubbles/>
+    
       <Container maxWidth="lg">
         {/* Link Section */}
         <Stack
