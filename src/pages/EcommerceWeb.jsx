@@ -1,10 +1,13 @@
 import { Box, Typography, Grid, Container } from "@mui/material";
 import Lottie from "lottie-react";
+import { useTheme } from '@mui/material/styles';
 import ecommerce from "../animation/ecommerce.json";
 import ewebsite from "../animation/ewebsite.json";
 import { motion } from "framer-motion";
 
 const EcommerceWeb = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <>
       <Box
@@ -88,7 +91,7 @@ const EcommerceWeb = () => {
 
       <Box
         sx={{
-          backgroundColor: "#ffffff",
+          backgroundColor: isDark ? '#121212' : '#fff',
           px: 2,
           py: { xs: 6, md: 10 },
         }}
@@ -128,7 +131,7 @@ const EcommerceWeb = () => {
             <Typography
               variant="body1"
               sx={{
-                color: "#333",
+                color: isDark ? '#fff' : '#000',
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: "800px",
                 mx: "auto",
@@ -143,7 +146,7 @@ const EcommerceWeb = () => {
             <Typography
               variant="body1"
               sx={{
-                color: "#333",
+                color: isDark ? '#fff' : '#000',
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: "800px",
                 mx: "auto",
@@ -187,7 +190,7 @@ const EcommerceWeb = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: 2,
-          backgroundColor: "#f9fafb",
+          backgroundColor: isDark ? '#121212' : '#fff',
         }}
       >
         <Grid container spacing={4} justifyContent="center">
@@ -260,7 +263,7 @@ const EcommerceWeb = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor: "#f7f9fc",
+          backgroundColor: isDark ? '#121212' : '#fff',
         }}
       >
         {/*because of this container layout was clashing to fix this use "xl" */}
@@ -337,7 +340,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -365,7 +368,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -378,7 +381,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -406,7 +409,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -418,7 +421,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -439,7 +442,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -452,7 +455,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -484,7 +487,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -497,7 +500,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -520,7 +523,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -533,7 +536,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -565,7 +568,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -578,7 +581,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -601,7 +604,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -614,7 +617,7 @@ const EcommerceWeb = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -635,7 +638,7 @@ const EcommerceWeb = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}

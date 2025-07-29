@@ -15,7 +15,7 @@ const features = [
   { icon: <TrendingUp fontSize="large" />, title: 'Result-Oriented', desc: 'We focus on delivering measurable business results.' },
 ];
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({isDark}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
         px: 3,
         position: 'relative',
         background: theme.palette.mode === 'dark'
-          ? '#0f172a'
+          ? '#000000'
           : '#eef4ff', // light soft background
         overflow: 'hidden',
       }}

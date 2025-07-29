@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { useTheme } from "@mui/material/styles"
 import animation from "../animation/developer.json";
 import { Box, Typography, Button, Grid } from "@mui/material";
 import BackgroundBubbles from "../components/BackgroundBubbles";
@@ -23,6 +24,8 @@ import UiUxIcon from "@mui/icons-material/Brush";
 
 
 const Home = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <Box
       sx={{
@@ -34,7 +37,8 @@ const Home = () => {
         zIndex: 0,
         position: "relative",
         overflow: "hidden",
-        background:"linear-gradient(135deg,rgb(122, 78, 204),rgb(88, 165, 201))",
+        background : isDark ? "linear-gradient(135deg, #121212, #1e1e1e)" // or any dark version 
+        : "linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))",
       }}
     >
       {/* Bubbles Background */}
@@ -135,8 +139,8 @@ const Home = () => {
                   px: 4,
                   py: 1.5,
                   fontWeight: "bold",
-                  color: "white",
-                  borderColor: "white",
+                  color: theme.palette.text.primary,
+                  borderColor: theme.palette.text.primary,
                   "&:hover": {
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
                   },
@@ -154,7 +158,8 @@ const Home = () => {
         sx={{
           py: 8,
           width: "100%",
-          backgroundColor: "#fff",
+          backgroundColor: isDark ? "#121212" : "#fff",  // ✅ Fix: dynamic background,
+           color: isDark ? "#f0f0f0" : "#000",
           zIndex: 3,
           position: "relative",
           
@@ -245,13 +250,14 @@ const Home = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
+                 isDark={isDark}
               />
             </Grid>
           ))}
         </Grid>
 
         {/* Our Plans Section */}
-        <OurPlans />
+        <OurPlans isDark={isDark} />
         
         {/* Testimonials Section */}
         <Testimonials/>
@@ -260,7 +266,7 @@ const Home = () => {
         <WhyChooseUs/>
 
         {/*FAQ Section*/}
-        <FaqSection/>
+        <FaqSection isDark={isDark}/>
 
         {/* Contact Card Section */}
         <ContactCardSection/>

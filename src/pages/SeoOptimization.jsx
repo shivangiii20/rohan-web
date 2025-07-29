@@ -1,5 +1,6 @@
 // import React from "react";
 import { Box, Container, Typography, Grid, } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import seopoints from "../animation/seopoints.json";
@@ -15,6 +16,8 @@ import {
 } from "@mui/icons-material";
 
 const SeoOptimization = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   const plans = [
     {
       title: "Basic Plan",
@@ -171,7 +174,7 @@ const SeoOptimization = () => {
       <Box
         sx={{
           width: "100%",
-          backgroundColor: "#f9f9f9",
+          backgroundColor:  isDark ? '#121212' : '#fff',
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 6 },
         }}
@@ -190,7 +193,7 @@ const SeoOptimization = () => {
                 fontWeight="bold"
                 sx={{
                   fontSize: { xs: "2rem", md: "2.8rem" },
-                  color: "#333",
+                  color: isDark ? '#fff' : '#000',
                   mb: 2,
                 }}
               >
@@ -225,7 +228,7 @@ const SeoOptimization = () => {
       </Box>
 
       {/* Feature Cards */}
-      <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: "white" }}>
+      <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: isDark ? '#121212' : '#fff', }}>
         <Container maxWidth="lg">
           <Box
             sx={{
@@ -292,7 +295,7 @@ const SeoOptimization = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor: "#f7f9fc",
+          backgroundColor: isDark ? '#121212' : '#fff',
         }}
       >
         {/*because of this container layout was clashing to fix this use "xl" */}
@@ -366,7 +369,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -396,7 +399,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -409,7 +412,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -439,7 +442,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -451,7 +454,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -473,7 +476,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -486,7 +489,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor:  isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -516,7 +519,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -529,7 +532,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -562,7 +565,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -575,7 +578,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -605,7 +608,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -618,7 +621,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -651,7 +654,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -664,7 +667,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -690,7 +693,7 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}

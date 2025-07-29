@@ -1,5 +1,6 @@
 import { Box, Typography, Container } from "@mui/material";
 import Lottie from "lottie-react";
+import { useTheme } from '@mui/material/styles';
 import androidan from "../animation/androidan.json"; 
 import {  Grid } from "@mui/material";
 import { Code, Android, IntegrationInstructions } from "@mui/icons-material"; 
@@ -8,6 +9,8 @@ import { motion } from "framer-motion";
 import {  Business, School, LocalMall, SportsEsports, Favorite, FlightTakeoff, LocalHospital, Security, Group, Restaurant, ShoppingCart } from "@mui/icons-material";
 
 const Andriodapp = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <>
     <Box
@@ -94,8 +97,8 @@ const Andriodapp = () => {
   sx={{
     py: 10,
     px: { xs: 2, md: 6 },
-    backgroundColor: "background.default",
-    color: "text.primary",
+    backgroundColor: isDark ? '#121212' : '#fff',
+    color: isDark ? '#fff' : '#000',
   }}
 >
   {/* Heading */}
@@ -172,8 +175,8 @@ const Andriodapp = () => {
   sx={{
     py: 10,
     px: { xs: 2, md: 6 },
-    backgroundColor: "background.default",
-    color: "text.primary",
+    backgroundColor:  isDark ? '#121212' : '#fff',
+    color:  isDark ? '#fff' : '#000',
   }}
 >
   <Box
@@ -225,7 +228,7 @@ const Andriodapp = () => {
         variant="body1"
         sx={{
           fontSize: { xs: "1rem", md: "1.1rem" },
-          color: "text.secondary",
+          color:  isDark ? '#fff' : '#000',
         }}
       >
         We don’t just build apps — we create experiences. Reach more users,
@@ -246,8 +249,8 @@ const Andriodapp = () => {
   sx={{
     py: 10,
     px: { xs: 2, md: 6 },
-    backgroundColor: "background.default",
-    color: "text.primary",
+    backgroundColor: isDark ? '#121212' : '#fff',
+    color: isDark ? '#fff' : '#000',
   }}
 >
   {/* Gradient Heading */}

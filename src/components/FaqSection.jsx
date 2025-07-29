@@ -72,7 +72,7 @@ const categoryIcons = {
   "Graphic Design": <DesignServicesIcon sx={{ color: '#ec407a' }} />,
 };
 
-const FaqSection = () => {
+const FaqSection = ({isDark}) => {
   const theme = useTheme();
   const [filter, setFilter] = useState("All");
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -92,7 +92,8 @@ const FaqSection = () => {
     sx={{
     py: 10,
     px: { xs: 2, md: 6 },
-    background: "linear-gradient(135deg, #e0eafc, #cfdef3)", // soft gradient
+    background: isDark ? '#1e1e1e' : '#f9f9f9', 
+    color: isDark ? '#f0f0f0' : '#000',
     backdropFilter: "blur(4px)",
     borderRadius: "12px",
     mx: "auto",

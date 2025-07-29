@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useAppTheme } from './ThemeContext'; // ✅ add at the top
+import { useTheme } from '@mui/material/styles';
+import { CssBaseline, Box } from '@mui/material';
 import Navbar from './components/Navbar';
 // Import all the pages
 import Home from './pages/Home';
@@ -16,9 +19,21 @@ import Androidapp from './pages/Androidapp';
 import EcommerceWeb from './pages/EcommerceWeb';
 
 function App() {
+  const theme = useTheme();
+  const { toggleTheme, mode } = useAppTheme(); 
+  const isDark = theme.palette.mode === 'dark';
   return (
+    <>
+    <Box
+    sx={{
+      bgcolor: isDark ? '#121212' : '#ffffff',
+      color: isDark ? '#fff' : '#000',
+      minHeight: '100vh',
+    }}
+  >
+    <CssBaseline />
     <Router>
-      <Navbar />
+       <Navbar toggleTheme={toggleTheme} mode={mode}/> {/* ✅ pass props */}
       
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,6 +56,8 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+    </Box>
+    </>
   );
 }
 

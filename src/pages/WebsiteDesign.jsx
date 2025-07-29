@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from '@mui/material/styles';
 import {
   Box,
   Typography,
@@ -37,6 +38,9 @@ const techCards = [
 ];
 
 const WebsiteDesign = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
+
   return (
     <>
       {/* Hero Section */}
@@ -45,7 +49,10 @@ const WebsiteDesign = () => {
           width: "100%",
           height: "100vh",
           position: "relative",
-          background: "linear-gradient(135deg, #c039ef, #60c2ff)",
+           color: isDark ? '#fff' : '#000',
+          background: isDark
+      ? 'linear-gradient(135deg, #121212, #1c1c1c)' // Dark mode gradient
+      : 'linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))',
           overflow: "hidden",
           display: "flex",
           justifyContent: "center",
@@ -81,9 +88,9 @@ const WebsiteDesign = () => {
       {/* Tech Cards Section */}
       <Box
         sx={{
-          backgroundColor: "#fff",
-          borderTopLeftRadius: { xs: 20, md: 32 },
-          borderTopRightRadius: { xs: 20, md: 32 },
+          backgroundColor: isDark ? '#121212' : '#fff',
+          borderTopLeftRadius: { xs: 10, md: 32 },
+          borderTopRightRadius: { xs: 10, md: 32 },
           mt: -8,
           py: { xs: 6, md: 8 },
           px: { xs: 2, md: 6 },
@@ -137,7 +144,8 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 8 },
-          backgroundColor: "#f9f9f9",
+          backgroundColor: isDark ? '#1e1e1e' : '#fff',
+    color: isDark ? '#fff' : '#000',
         }}
       >
         <Container maxWidth="lg">
@@ -177,7 +185,7 @@ const WebsiteDesign = () => {
                 variant="body1"
                 sx={{
                   mb: 1,
-                  color: "#444",
+                  color:  isDark ? '#fff' : '#000',
                   fontSize: { xs: "1rem", md: "1.1rem" },
                 }}
               >
@@ -228,7 +236,7 @@ const WebsiteDesign = () => {
                 variant="body1"
                 sx={{
                   mb: 2,
-                  color: "#444",
+                  color:  isDark ? '#fff' : '#000',
                   maxWidth: 500,
                   fontSize: { xs: "1rem", md: "1.1rem" },
                 }}
@@ -241,7 +249,7 @@ const WebsiteDesign = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#666",
+                  color:  isDark ? '#fff' : '#000',
                   fontSize: { xs: "0.95rem", md: "1.05rem" },
                   fontStyle: "italic",
                 }}
@@ -261,7 +269,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor: "#fff",
+          backgroundColor:  isDark ? '#121212' : '#fff',
         }}
       >
         <Container maxWidth="lg">
@@ -334,7 +342,7 @@ const WebsiteDesign = () => {
                         "linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))",
                       borderRadius: 4,
                       p: { xs: 3, md: 4 },
-                      color: "#fff",
+                      color:  isDark ? '#fff' : '#000',
                       textAlign: "center",
                       minHeight: { xs: 220, md: 280 },
                       width: "100%",
@@ -370,7 +378,8 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor: "#f7f9fc",
+          backgroundColor:  isDark ? '#1e1e1e' : '#fff',
+    color: isDark ? '#fff' : '#000',
         }}
       >
         <Container maxWidth="lg">
@@ -443,7 +452,8 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor:  isDark ? '#121212' : '#fff',
+                       
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -469,7 +479,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -482,7 +492,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff' ,
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -508,7 +518,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color: isDark ? '#fff' : '#000',
                           }}
                         >
                           {feature}
@@ -521,7 +531,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -547,7 +557,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000' 
                           }}
                         >
                           {feature}
@@ -560,7 +570,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -581,7 +591,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -594,7 +604,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -620,7 +630,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -633,7 +643,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -654,7 +664,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -667,7 +677,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: "#fff",
+                        backgroundColor: isDark ? '#121212' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -688,7 +698,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: "#333",
+                            color:  isDark ? '#fff' : '#000'
                           }}
                         >
                           {feature}
@@ -708,7 +718,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 0 },
-          backgroundColor: "#f7f9fc",
+          backgroundColor: isDark ? '#121212' : '#fff',
           mt: 8, // adds space after plans
         }}
       >

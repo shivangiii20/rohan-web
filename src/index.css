@@ -10,7 +10,8 @@ html, body, #root {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: white;
+  background-color: #fff;
+   transition: background-color 0.3s ease;
   overflow-x: hidden;
 }
 

@@ -36,7 +36,7 @@ const ContactCardSection = () => {
         py: 10,
         px: 2,
         background: isDark
-          ? 'linear-gradient(135deg, #0f172a, #1e293b)'
+          ? 'linear-gradient(135deg, #000000ff, #000000ff)'
           : 'linear-gradient(135deg, #e0f7fa, #e3f2fd)',
         textAlign: 'center',
       }}

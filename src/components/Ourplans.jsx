@@ -59,9 +59,9 @@ const plans = [
   },
 ];
 
-const OurPlans = () => {
+const OurPlans = ({isDark}) => {
   return (
-    <Box sx={{ py: 8, backgroundColor: "#f5f5f5" }}>
+    <Box sx={{ py: 8, backgroundColor:  isDark ? '#1e1e1e' : '#f9f9f9', color: isDark ? '#f0f0f0' : '#000', }}>
    <Box sx={{ display: "flex", justifyContent: "center" }}>
   <Typography
     variant="h4"
@@ -137,8 +137,8 @@ const OurPlans = () => {
                   <Button
                     variant="contained"
                     sx={{
-                      backgroundColor: "#fff",
-                      color: "#000",
+                      backgroundColor: isDark ? '#2a2a2a' : '#fff',
+                      color: isDark ? '#fff' : '#000',
                       fontWeight: "bold",
                       "&:hover": {
                         backgroundColor: "#eee",

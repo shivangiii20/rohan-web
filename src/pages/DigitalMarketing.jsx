@@ -1,5 +1,6 @@
 import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import Lottie from "lottie-react";
+import { useTheme } from '@mui/material/styles';
 import dmarketing from "../animation/dmarketing.json";
 import { motion } from "framer-motion";
 import {
@@ -23,6 +24,8 @@ const marketingCards = [
 ];
 
 const DigitalMarketing = () => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
   return (
     <>
       {/* Hero Section */}
@@ -111,7 +114,7 @@ const DigitalMarketing = () => {
       {/* Cards Section */}
       <Box
         sx={{
-          bgcolor: "background.default",
+          bgcolor: isDark ? '#121212' : '#fff',
           py: 10,
           px: { xs: 2, md: 6 },
           color: "text.primary",
@@ -139,7 +142,7 @@ const DigitalMarketing = () => {
             <Typography
               variant="body1"
               sx={{
-                color: "text.secondary",
+                color:  isDark ? '#fff' : '#000',
                 textAlign: "center",
                 maxWidth: "700px",
                 mx: "auto",
@@ -211,7 +214,7 @@ const DigitalMarketing = () => {
           <Typography
             variant="body1"
             sx={{
-              color: "text.secondary",
+              color:  isDark ? '#fff' : '#000',
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
@@ -248,7 +251,7 @@ const DigitalMarketing = () => {
           <Typography
             variant="body1"
             sx={{
-              color: "text.secondary",
+              color:  isDark ? '#fff' : '#000',
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
@@ -285,7 +288,7 @@ const DigitalMarketing = () => {
           <Typography
             variant="body1"
             sx={{
-              color: "text.secondary",
+              color:  isDark ? '#fff' : '#000',
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
@@ -300,7 +303,7 @@ const DigitalMarketing = () => {
       </Box>
 
       {/* Feature Cards */}
-      <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: "white" }}>
+      <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: isDark ? '#121212' : '#fff', }}>
         <Container maxWidth="lg">
           <Box
             sx={{
@@ -388,7 +391,7 @@ const DigitalMarketing = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor: "#f7f9fc",
+          backgroundColor: isDark ? '#121212' : '#fff',
         }}
       >
         {/*because of this container layout was clashing to fix this use "xl" */}
@@ -474,7 +477,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -499,7 +502,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
@@ -512,7 +515,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -537,7 +540,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
@@ -549,7 +552,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -570,7 +573,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
@@ -583,7 +586,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -608,7 +611,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
@@ -621,7 +624,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -643,7 +646,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
@@ -656,7 +659,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: "#fff",
+                      backgroundColor: isDark ? '#121212' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -678,7 +681,7 @@ const DigitalMarketing = () => {
                           pb: 1,
                           mb: 1,
                           fontSize: "0.95rem",
-                          color: "#333",
+                          color:  isDark ? '#fff' : '#000',
                         }}
                       >
                         {feature}
