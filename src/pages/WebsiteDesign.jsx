@@ -378,7 +378,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor:  isDark ? '#1e1e1e' : '#fff',
+          backgroundColor:  isDark ? '#0e0e0eff' : '#fff',
     color: isDark ? '#fff' : '#000',
         }}
       >
@@ -452,7 +452,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor:  isDark ? '#121212' : '#fff',
+                        backgroundColor:  isDark ? '#1f1d1dff' : '#fff',
                        
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
@@ -492,7 +492,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff' ,
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff' ,
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -531,7 +531,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff': '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -570,7 +570,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -604,7 +604,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -643,7 +643,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff': '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -677,7 +677,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -718,7 +718,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 0 },
-          backgroundColor: isDark ? '#121212' : '#fff',
+          backgroundColor: isDark ? '#0a0909ff' : '#fff',
           mt: 8, // adds space after plans
         }}
       >

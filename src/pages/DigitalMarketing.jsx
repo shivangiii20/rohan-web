@@ -477,7 +477,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff': '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -515,7 +515,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -552,7 +552,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -586,7 +586,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -624,7 +624,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,
@@ -659,7 +659,7 @@ const DigitalMarketing = () => {
                   <Box
                     sx={{
                       mt: 3,
-                      backgroundColor: isDark ? '#121212' : '#fff',
+                      backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                       borderRadius: 3,
                       boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                       p: 3,

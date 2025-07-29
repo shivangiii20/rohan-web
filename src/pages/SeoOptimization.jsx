@@ -174,7 +174,7 @@ const SeoOptimization = () => {
       <Box
         sx={{
           width: "100%",
-          backgroundColor:  isDark ? '#121212' : '#fff',
+          backgroundColor:  isDark ? '#100f0fff' : '#fff',
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 6 },
         }}
@@ -369,7 +369,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -412,7 +412,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -454,7 +454,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -489,7 +489,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor:  isDark ? '#121212' : '#fff',
+                        backgroundColor:  isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -532,7 +532,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -578,7 +578,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -621,7 +621,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -667,7 +667,7 @@ const SeoOptimization = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#121212' : '#fff',
+                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
