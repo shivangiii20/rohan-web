@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Typography, Container, useTheme, Grid } from "@mui/material";
+import { Box, Typography, Container,  Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTheme } from "@mui/material/styles";
 import BackgroundBubbles from "../components/BackgroundBubbles";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
@@ -18,6 +19,7 @@ import {
 } from "react-icons/fa"; // At top with other imports
 
 const zigzagContent = [
+  
   {
     title: "Who We Are:",
     text: `RS Web Solutions is a premier software development company with over 7 years of experience in crafting innovative digital solutions. We specialize in building custom applications that drive business growth, leveraging our expertise to deliver scalable, secure, and user-friendly software tailored to your unique requirements.
@@ -49,6 +51,7 @@ These values shape our culture and client relationships – we don't just build 
 
 const AboutUs = () => {
   const theme = useTheme();
+    const isDark = theme.palette.mode === "dark";
 
   return (
     <>
@@ -88,11 +91,11 @@ const AboutUs = () => {
               fontWeight="bold"
               sx={{
                 background:
-                  "linear-gradient(270deg, #ff6ec4, #7873f5, #ff6ec4)",
+                  "linear-gradient(270deg, #b60d70ff, #270de8ff)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-                backgroundSize: "600% 600%",
-                animation: "shineGradient 6s ease infinite",
+                // backgroundSize: "600% 600%",
+                // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
               }}
             >
@@ -119,7 +122,7 @@ const AboutUs = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode === "dark" ? "#1e1e2f" : "#ffffff",
+            theme.palette.mode === "dark" ? "#0f0f10ff" : "#ffffff",
           py: { xs: 6, md: 8 },
           px: { xs: 2, md: 6 },
           boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
@@ -177,16 +180,26 @@ const AboutUs = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Typography variant="h5" fontWeight="bold" gutterBottom>
+                    <Typography variant="h5" fontWeight="bold" gutterBottom
+                    sx={{
+    color: isDark ? "#ffffff" : "#111111",
+  }}
+                    >
                       {section.title}
                     </Typography>
                     <Typography
-                      variant="body1"
-                      color="text.secondary"
-                      sx={{ lineHeight: 1.8 }}
-                    >
-                      {section.text}
-                    </Typography>
+  variant="body1"
+  sx={{
+    color: isDark ? "#dddddd" : "text.secondary",
+    lineHeight: 1.9,
+    fontSize: { xs: "1rem", md: "1.125rem" },
+    letterSpacing: 0.2,
+  }}
+>
+  {section.text}
+</Typography>
+<br/><br/>
+
                   </motion.div>
                 </Grid>
               </Grid>
@@ -206,7 +219,7 @@ const AboutUs = () => {
               align="center"
               gutterBottom
               sx={{
-                background: "linear-gradient(135deg, #9f2dc9, #3796da)",
+                background: "linear-gradient(135deg, #13bee4ff, #ed0c93ff)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 mb: 4,
@@ -215,8 +228,13 @@ const AboutUs = () => {
               Why Choose Us?
             </Typography>
 
-            <Grid container spacing={4}
-             justifyContent="center"
+            <Grid container spacing={4}   columns={{ xs: 12, sm: 12, md: 12 }} sx={{ 
+    // width:  '100%',
+    maxWidth: '1400px',
+    mx: " auto", 
+    px: { xs: 2, sm: 4, md: 6 },
+  }}
+            
   wrap="wrap">
               {[
                 {
@@ -250,7 +268,7 @@ const AboutUs = () => {
                   text: "We use cutting-edge technologies to future-proof your product.",
                 },
               ].map((item, i) => (
-                <Grid item xs={12} sm={6} md={4} key={i} sx={{display: "flex" , justifyContent: "center"}}>
+                <Grid item xs={12} sm={6} lg={4}  key={i} sx={{display: "flex" , justifyContent: "center"}}>
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

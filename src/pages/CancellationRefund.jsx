@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Typography, Container, useTheme, Paper } from "@mui/material";
+import { Box, Typography, Container, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import BackgroundBubbles from "../components/BackgroundBubbles";
+import { useTheme } from "@mui/material/styles";
 
 const CancellationAndRefund = () => {
   const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
 
   return (
     <>
@@ -44,11 +46,11 @@ const CancellationAndRefund = () => {
               fontWeight="bold"
               sx={{
                 background:
-                  "linear-gradient(270deg, #ff6ec4, #7873f5, #ff6ec4)",
+                  "linear-gradient(270deg, #a727bbff, #0d5461ff, #2328c0ff)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-                backgroundSize: "600% 600%",
-                animation: "shineGradient 6s ease infinite",
+                // backgroundSize: "600% 600%",
+                // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
               }}
             >
@@ -74,7 +76,7 @@ const CancellationAndRefund = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode === "dark" ? "#1e1e2f" : "#ffffff",
+            theme.palette.mode === "dark" ? "#0a0a0aff" : "#ffffff",
           py: { xs: 6, md: 8 },
           px: { xs: 2, md: 6 },
           boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
@@ -92,7 +94,7 @@ const CancellationAndRefund = () => {
               borderRadius: 4,
               p: { xs: 4, md: 6 },
               backgroundColor:
-                theme.palette.mode === "dark" ? "#1a1a2e" : "#ffffff",
+                theme.palette.mode === "dark" ? "#0e0e0fff" : "#ffffff",
             }}
           >
             <motion.div
@@ -101,38 +103,94 @@ const CancellationAndRefund = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <Typography variant="h5" fontWeight="bold" gutterBottom>
-                Cancellation Policy
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Project Cancellation by Client
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                RS Web Solutions allows cancellations only within 24 hours of placing the order. Once the development or design process has started, cancellations are no longer accepted.
+              <Typography
+                variant="body1"
+                paragraph
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.2rem" }, // Larger text
+                  fontWeight: 500, // Semi-bold
+                  color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
+                  lineHeight: 1.8,
+                }}
+              >
+                Clients may request cancellation of a project at any stage by
+                providing written notice. However, work completed up to the date
+                of cancellation will be chargeable.
+                <br /> If the project is canceled before work has started, a
+                partial refund may be processed after deducting administrative
+                or consultation charges. No full refund will be issued for
+                cancellations after project initiation. <br />
               </Typography>
 
-              <Typography variant="h5" fontWeight="bold" gutterBottom>
-                Refund Policy
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Non-Refundable Services
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                We do not offer refunds for services that are already delivered or partially completed. Refunds may only be issued if a project has not been started and the cancellation request is approved within 24 hours.
+              <Typography
+                variant="body1"
+                paragraph
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.2rem" }, // Larger text
+                  fontWeight: 500, // Semi-bold
+                  color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
+                  lineHeight: 1.8,
+                }}
+              >
+                All digital services, including but not limited to website
+                design, SEO, app development, and branding, involve creative and
+                time-based resources. Therefore, once work has begun, payments
+                made are non-refundable. This includes any upfront payments or
+                part payments made toward the project scope. <br />
               </Typography>
 
-              <Typography variant="h5" fontWeight="bold" gutterBottom>
-                No Refunds in These Cases
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Company-Initiated Cancellations
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                • Client delays or lack of communication<br />
-                • Change of mind after work has begun<br />
-                • Customizations or change in scope after project initiation<br />
+              <Typography
+                variant="body1"
+                paragraph
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.2rem" }, // Larger text
+                  fontWeight: 500, // Semi-bold
+                  color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
+                  lineHeight: 1.8,
+                }}
+              >
+                We reserve the right to cancel a project in situations such as:
+                repeated client unresponsiveness, violation of terms, misuse of
+                our services, or unforeseen technical/legal circumstances. In
+                such cases, the client will be notified in writing, and any
+                refund (if applicable) will be at our sole discretion based on
+                work completed. <br />
               </Typography>
 
-              <Typography variant="h5" fontWeight="bold" gutterBottom>
-                How to Request a Refund
+              <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Refund Timeline & Process
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                Please contact our support team at support@rswebsolutions.com with your order details. Refunds, if approved, will be processed within 7 working days via the original payment method.
+              <Typography
+                variant="body1"
+                paragraph
+                sx={{
+                  fontSize: { xs: "1rem", md: "1.2rem" }, // Larger text
+                  fontWeight: 500, // Semi-bold
+                  color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
+                  lineHeight: 1.8,
+                }}
+              >
+                If a refund is approved, it will be processed within 7 to 10
+                working days via the original payment method. We may deduct
+                applicable fees for consultations, payment gateway charges, or
+                partial work already delivered. Refund decisions are final and
+                at the discretion of the company.
+                <br />
               </Typography>
 
               <Typography variant="body1" color="text.secondary" mt={3}>
                 For further clarity, feel free to reach out. We're here to help.
+                <br />
+                Thank You!
               </Typography>
             </motion.div>
           </Paper>

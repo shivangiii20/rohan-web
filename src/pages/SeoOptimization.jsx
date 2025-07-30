@@ -114,7 +114,7 @@ const SeoOptimization = () => {
         sx={{
           minHeight: "100vh",
           width: "100%",
-          backgroundImage: "url('/images/seoim.jpg')",
+          backgroundImage: "url('/images/seob2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
