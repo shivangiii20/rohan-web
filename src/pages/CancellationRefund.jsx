@@ -52,6 +52,7 @@ const CancellationAndRefund = () => {
                 // backgroundSize: "600% 600%",
                 // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
+                fontFamily: 'semiBold'
               }}
             >
               CANCELLATION <span style={{ color: "#fff" }}>AND REFUNDS</span>
@@ -63,6 +64,7 @@ const CancellationAndRefund = () => {
                 color: "#fff",
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: 600,
+                fontFamily: 'bitterMedium'
               }}
             >
               Our policy ensures transparency and fairness in every transaction.
@@ -103,7 +105,7 @@ const CancellationAndRefund = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'bitterBold'}}>
                 Project Cancellation by Client
               </Typography>
               <Typography
@@ -114,6 +116,7 @@ const CancellationAndRefund = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 Clients may request cancellation of a project at any stage by
@@ -125,7 +128,7 @@ const CancellationAndRefund = () => {
                 cancellations after project initiation. <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'bitterBold'}}>
                 Non-Refundable Services
               </Typography>
               <Typography
@@ -136,6 +139,7 @@ const CancellationAndRefund = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 All digital services, including but not limited to website
@@ -145,7 +149,7 @@ const CancellationAndRefund = () => {
                 part payments made toward the project scope. <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'bitterBold'}}>
                 Company-Initiated Cancellations
               </Typography>
               <Typography
@@ -156,6 +160,7 @@ const CancellationAndRefund = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 We reserve the right to cancel a project in situations such as:
@@ -166,7 +171,7 @@ const CancellationAndRefund = () => {
                 work completed. <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'bitterBold'}}>
                 Refund Timeline & Process
               </Typography>
               <Typography
@@ -177,6 +182,7 @@ const CancellationAndRefund = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 If a refund is approved, it will be processed within 7 to 10

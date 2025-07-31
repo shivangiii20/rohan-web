@@ -97,6 +97,7 @@ const AboutUs = () => {
                 // backgroundSize: "600% 600%",
                 // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
+                fontFamily: 'semiBold'
               }}
             >
               ABOUT <span style={{ color: "#fff" }}>US</span>
@@ -108,6 +109,7 @@ const AboutUs = () => {
                 color: "#fff",
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: 600,
+                fontFamily: 'bitterMedium'
               }}
             >
               We are a full-stack digital agency that believes being a favorite
@@ -223,6 +225,7 @@ const AboutUs = () => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 mb: 4,
+                fontFamily: 'semiBold'
               }}
             >
               Why Choose Us?

@@ -25,10 +25,10 @@ const Services = ({ icon, title, description }) => {
       <Box sx={{ mb: 2 }}>
         {React.cloneElement(icon, { fontSize: 'large', sx: { color: 'white' } })}
       </Box>
-      <Typography variant="h6" fontWeight="bold" gutterBottom>
+      <Typography variant="h6" fontWeight="bold" gutterBottom sx={{fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" },}}>
         {title}
       </Typography>
-      <Typography variant="body2">{description}</Typography>
+      <Typography variant="body2" sx={{fontFamily: 'Robot', fontSize: { xs: "1.1rem", md: "1.3rem" },}}>{description}</Typography>
     </Card>
   );
 };

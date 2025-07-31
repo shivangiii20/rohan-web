@@ -74,6 +74,7 @@ const DigitalMarketing = () => {
                 color: "white",
                 fontWeight: "bold",
                 fontSize: { xs: "1.7rem", sm: "2rem", md: "2.5rem" },
+                fontFamily: 'semiBold'
               }}
             >
               Supercharge Your Brand with{" "}
@@ -84,7 +85,8 @@ const DigitalMarketing = () => {
               sx={{
                 color: "white",
                 mt: 2,
-                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+                fontSize: { xs: "0.9rem", sm: "3rem", md: "1.8rem" },
+                fontFamily: 'Robot'
               }}
             >
               Boost traffic, increase leads, and grow your business with smart,
@@ -134,7 +136,11 @@ const DigitalMarketing = () => {
                 fontWeight: "bold",
                 textAlign: "center",
                 mb: 2,
-                fontSize: { xs: "2rem", md: "2.5rem" },
+                fontSize: { xs: "2rem", md: "2.9rem" },
+                fontFamily: 'semibold',
+                background: "linear-gradient(135deg, #dd5eeeff, #4fdbea)",
+                WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
               }}
             >
               Promote Your Business Across Top Channels
@@ -146,7 +152,8 @@ const DigitalMarketing = () => {
                 textAlign: "center",
                 maxWidth: "700px",
                 mx: "auto",
-                fontSize: { xs: "0.95rem", md: "1.1rem" },
+                fontSize: { xs: "0.95rem", md: "1.8rem" },
+                fontFamily: 'Robot'
               }}
             >
               Get your message out on Instagram, Facebook, Google, and more —
@@ -202,10 +209,11 @@ const DigitalMarketing = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 2,
-              fontSize: { xs: "2rem", md: "2.5rem" },
+              fontSize: { xs: "2rem", md: "2.7rem" },
               background: "linear-gradient(135deg, #d240e5, #4fdbea)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              fontFamily: 'semiBold'
             }}
           >
             We Help Brands Build Trust, Get Noticed, and Stay Ahead in the
@@ -218,7 +226,8 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.1rem" },
+              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontFamily: 'Robot'
             }}
           >
             Our expert strategies focus on creating visibility and long-term
@@ -240,10 +249,11 @@ const DigitalMarketing = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 2,
-              fontSize: { xs: "2rem", md: "2.5rem" },
+              fontSize: { xs: "2rem", md: "2.7rem" },
               background: "linear-gradient(135deg, #701accff, #6fe0c6ff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              fontFamily: 'semiBold',
             }}
           >
             We Don’t Just Market — We Grow Your Business from the Ground Up
@@ -255,7 +265,8 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.1rem" },
+              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontFamily: 'Robot'
             }}
           >
             Our full-funnel digital campaigns are built to deliver traffic,
@@ -277,10 +288,11 @@ const DigitalMarketing = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 2,
-              fontSize: { xs: "2rem", md: "2.5rem" },
+              fontSize: { xs: "2rem", md: "2.7rem" },
               background: "linear-gradient(135deg, #a31fb8dc, #43d7d4ff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              fontFamily: 'semiBold'
             }}
           >
             Reach the Right Audience with the Right Message at the Right Time
@@ -292,7 +304,8 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.1rem" },
+              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontFamily: 'Robot'
             }}
           >
             With hyper-targeted ad campaigns, precision SEO, and creative
@@ -405,7 +418,12 @@ const DigitalMarketing = () => {
             sx={{
               textAlign: "center",
               mb: 6,
-              fontSize: { xs: "2rem", md: "2.6rem" },
+              fontSize: { xs: "2rem", md: "2.9rem" },
+              fontFamily: 'semiBold',
+              background: "linear-gradient(135deg, #d240e5, #4fdbea)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+
             }}
           >
             Our Affordable Digital Marketing plans

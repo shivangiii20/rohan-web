@@ -51,6 +51,7 @@ const TermsAndConditions = () => {
                 // backgroundSize: "600% 600%",
                 // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
+                fontFamily: 'semiBold',
               }}
             >
               TERMS <span style={{ color: "#fff" }}>AND CONDITIONS</span>
@@ -62,6 +63,7 @@ const TermsAndConditions = () => {
                 color: "#fff",
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: 600,
+                fontFamily: 'bitterMedium'
               }}
             >
               Please read our terms and conditions carefully before using our
@@ -103,7 +105,7 @@ const TermsAndConditions = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'BitterBold'}}>
                 Terms of Service
               </Typography>
               <Typography
@@ -114,6 +116,7 @@ const TermsAndConditions = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 Our services are provided under the assumption that you’ve read
@@ -131,7 +134,7 @@ const TermsAndConditions = () => {
                 <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'BitterBold'}}>
                 Ownership & Intellectual Property
               </Typography>
               <Typography
@@ -142,6 +145,7 @@ const TermsAndConditions = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter'
                 }}
               >
                 All designs, code, content, and materials developed during the
@@ -157,7 +161,7 @@ const TermsAndConditions = () => {
                 them or properly licensed. <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'BitterBold'}}>
                 Data Privacy & Confidentiality
               </Typography>
               <Typography
@@ -168,6 +172,7 @@ const TermsAndConditions = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                fontFamily: 'Bitter',
                 }}
               >
                 We take data privacy seriously. All client data shared with us —
@@ -182,7 +187,7 @@ const TermsAndConditions = () => {
                 <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'BitterBold'}}>
                 Project Delivery, Revisions & Timelines
               </Typography>
               <Typography
@@ -193,6 +198,7 @@ const TermsAndConditions = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily: 'Bitter',
                 }}
               >
                 All projects are initiated after full or partial payment
@@ -208,7 +214,7 @@ const TermsAndConditions = () => {
                 <br />
               </Typography>
 
-              <Typography variant="h4" fontWeight="bold" gutterBottom>
+              <Typography variant="h4" fontWeight="bold" gutterBottom sx={{fontFamily: 'BitterBold'}}>
                 Post-Delivery Support Policy
               </Typography>
               <Typography
@@ -219,6 +225,7 @@ const TermsAndConditions = () => {
                   fontWeight: 500, // Semi-bold
                   color: isDark ? "#e0e0e0" : "text.secondary", // Dark mode compatible
                   lineHeight: 1.8,
+                  fontFamily:'Bitter',
                 }}
               >
                 We provide limited post-delivery support (typically 7–14 days)

@@ -54,6 +54,7 @@ const Portfolio = () => {
                 // backgroundSize: "600% 600%",
                 // animation: "shineGradient 6s ease infinite",
                 fontSize: { xs: "2.5rem", md: "4rem" },
+                fontFamily: 'semiBold'
               }}
             >
               OUR <span style={{ color: "#fff" }}>PORTFOLIO</span>
@@ -65,6 +66,7 @@ const Portfolio = () => {
                 color: "#fff",
                 fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: 600,
+                fontFamily: 'bitterMedium'
               }}
             >
               Explore our latest projects that blend creativity, functionality, and innovation.
@@ -118,9 +120,10 @@ const Portfolio = () => {
     fontWeight="bold"
     sx={{
       mb: 4,
-      background: "linear-gradient(to right, #21a1a6ff, #7c0e59ff)",
+      background: "linear-gradient(to right, #54e9eeff, #ae52d5ff)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
+      fontFamily: 'semiBold'
     }}
   >
     Our Work Showcase

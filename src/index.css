@@ -14,6 +14,55 @@ html, body, #root {
    transition: background-color 0.3s ease;
   overflow-x: hidden;
 }
+@font-face {
+  font-family: 'Bitter';
+  src: url('/fonts/Bitter-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'bitterMedium';
+  src: url('/fonts/bitterMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'BitterBold';
+  src: url('/fonts/Bitter-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'semiBold';
+  src: url('/fonts/semiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Black';
+  src: url('/fonts/Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Robot';
+  src: url('/fonts/Robot.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+
+
+
+
 
 /* @keyframes gradientAnimation {
   0% {

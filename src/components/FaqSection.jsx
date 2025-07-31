@@ -92,7 +92,7 @@ const FaqSection = ({isDark}) => {
     sx={{
     py: 10,
     px: { xs: 2, md: 6 },
-    background: isDark ? '#1e1e1e' : '#f9f9f9', 
+    background: isDark ? '#030303ff' : '#fdfdfdff', 
     color: isDark ? '#f0f0f0' : '#000',
     backdropFilter: "blur(4px)",
     borderRadius: "12px",
@@ -113,7 +113,8 @@ const FaqSection = ({isDark}) => {
               background: "linear-gradient(135deg, #9f7aea, #63d2ff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              fontSize: { xs: '2rem', md: '2.5rem' },
+              fontSize: { xs: '2rem', md: '2.9rem' },
+              fontFamily: 'semiBold'
             }}
           >
             Frequently Asked Questions
@@ -123,7 +124,7 @@ const FaqSection = ({isDark}) => {
         <Typography
           variant="body1"
           align="center"
-          sx={{ mb: 5, color: theme.palette.mode === "dark" ? "#cbd5e1" : "#555" }}
+          sx={{ mb: 5, color: theme.palette.mode === "dark" ? "#cbd5e1" : "#555", fontFamily: 'Robot', fontSize: { xs: '0.95rem', md: '1.12rem' }, }}
         >
           Get clear answers to the most common queries we receive from clients.
         </Typography>
@@ -161,6 +162,8 @@ const FaqSection = ({isDark}) => {
         sx={{
           textTransform: "none",
           fontWeight: "bold",
+          fontFamily: 'semiBold',
+          fontSize: { xs: "1rem", md: "1.2rem" },
           px: 2,
           py: 1,
           borderRadius: "8px",
@@ -228,7 +231,7 @@ const FaqSection = ({isDark}) => {
                           {categoryIcons[item.category]}
                         </motion.div>
                       )}
-                      <Typography fontWeight="bold">{item.question}</Typography>
+                      <Typography   sx={{ fontFamily: 'semiBold', fontWeight: 'bold', fontSize: { xs: "1rem", md: "1.2rem" }, }}>{item.question}</Typography>
                     </Box>
                   </AccordionSummary>
                   <AccordionDetails
@@ -237,10 +240,13 @@ const FaqSection = ({isDark}) => {
                       color: "#333",
                       p: 3,
                       pt: 2,
-                      fontSize: "0.95rem",
+                      
+                  
                     }}
-                  >
-                    {item.answer}
+                    >
+                    <Typography sx={{ fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1.2rem" }, }}>
+    {item.answer}
+  </Typography>
                   </AccordionDetails>
                 </Accordion>
               </motion.div>

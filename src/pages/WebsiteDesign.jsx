@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 import {
   Box,
   Typography,
@@ -39,7 +39,7 @@ const techCards = [
 
 const WebsiteDesign = () => {
   const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark';
+  const isDark = theme.palette.mode === "dark";
 
   return (
     <>
@@ -49,10 +49,10 @@ const WebsiteDesign = () => {
           width: "100%",
           height: "100vh",
           position: "relative",
-           color: isDark ? '#fff' : '#000',
+          color: isDark ? "#fff" : "#000",
           background: isDark
-      ? 'linear-gradient(135deg, #121212, #1c1c1c)' // Dark mode gradient
-      : 'linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))',
+            ? "linear-gradient(135deg, #121212, #1c1c1c)" // Dark mode gradient
+            : "linear-gradient(135deg, rgba(180, 120, 233, 1), rgba(86, 190, 216, 1))",
           overflow: "hidden",
           display: "flex",
           justifyContent: "center",
@@ -73,14 +73,32 @@ const WebsiteDesign = () => {
             variant="h3"
             fontWeight="bold"
             sx={{
-              background: "linear-gradient(270deg, #ff6ec4, #7873f5)",
+              background: "linear-gradient(270deg, #e515c6ff, #3443e8ff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               fontSize: { xs: "2.2rem", md: "3.5rem" },
               mb: 4,
+              fontFamily: "semiBold",
             }}
           >
             Low Cost Web Designing
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: "0.98rem", md: "1.4rem" },
+              color: isDark ? "#fff" : "#fff",
+              maxWidth: "800px",
+              marginX: { xs: "auto", md: 0 },
+              fontFamily: "Robot",
+            }}
+          >
+            Get a professional, mobile-friendly, and SEO-ready website at a
+            pocket-friendly price! Our low-cost web designing services are
+            perfect for startups, small businesses, and individuals looking to
+            make a strong online impact without spending big. We blend creative
+            design with smart functionality to deliver high-quality websites
+            that look great and perform even better — all within your budget.
           </Typography>
         </motion.div>
       </Box>
@@ -88,7 +106,7 @@ const WebsiteDesign = () => {
       {/* Tech Cards Section */}
       <Box
         sx={{
-          backgroundColor: isDark ? '#121212' : '#fff',
+          backgroundColor: isDark ? "#121212" : "#fff",
           borderTopLeftRadius: { xs: 10, md: 32 },
           borderTopRightRadius: { xs: 10, md: 32 },
           mt: -8,
@@ -144,8 +162,8 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 8 },
-          backgroundColor: isDark ? '#1e1e1e' : '#fff',
-    color: isDark ? '#fff' : '#000',
+          backgroundColor: isDark ? "#1e1e1e" : "#fff",
+          color: isDark ? "#fff" : "#000",
         }}
       >
         <Container maxWidth="lg">
@@ -185,8 +203,9 @@ const WebsiteDesign = () => {
                 variant="body1"
                 sx={{
                   mb: 1,
-                  color:  isDark ? '#fff' : '#000',
-                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  color: isDark ? "#fff" : "#000",
+                  fontSize: { xs: "1rem", md: "1.2rem" },
+                  fontFamily: 'semiBold'
                 }}
               >
                 Looking for{" "}
@@ -195,6 +214,7 @@ const WebsiteDesign = () => {
                   sx={{
                     color: "#00b894",
                     fontWeight: 600,
+                    fontFamily: 'semiBold'
                   }}
                 >
                   Low Price
@@ -209,6 +229,7 @@ const WebsiteDesign = () => {
                   fontSize: { xs: "2.2rem", md: "3.2rem" },
                   lineHeight: 1.2,
                   mb: 2,
+                  fontFamily: 'semibold'
                 }}
               >
                 WEBSITE{" "}
@@ -236,9 +257,10 @@ const WebsiteDesign = () => {
                 variant="body1"
                 sx={{
                   mb: 2,
-                  color:  isDark ? '#fff' : '#000',
+                  color: isDark ? "#fff" : "#000",
                   maxWidth: 500,
-                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  fontSize: { xs: "1rem", md: "1.4rem" },
+                  fontFamily: 'Robot'
                 }}
               >
                 Web design is an art form that reflects your business acumen. As
@@ -249,9 +271,11 @@ const WebsiteDesign = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color:  isDark ? '#fff' : '#000',
+                  color: isDark ? "#fff" : "#000",
                   fontSize: { xs: "0.95rem", md: "1.05rem" },
                   fontStyle: "italic",
+                  fontFamily: 'Bitter',
+                  
                 }}
               >
                 We pioneered low price website design specifically for{" "}
@@ -269,7 +293,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor:  isDark ? '#121212' : '#fff',
+          backgroundColor: isDark ? "#121212" : "#fff",
         }}
       >
         <Container maxWidth="lg">
@@ -279,7 +303,11 @@ const WebsiteDesign = () => {
             sx={{
               textAlign: "center",
               mb: 6,
-              fontSize: { xs: "2rem", md: "2.6rem" },
+              fontSize: { xs: "2rem", md: "2.9rem" },
+              background: "linear-gradient(270deg, #b1239cff, #279cbaff)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontFamily: "semiBold",
             }}
           >
             Website Designing Features
@@ -339,10 +367,10 @@ const WebsiteDesign = () => {
                   <Box
                     sx={{
                       background:
-                        "linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))",
+                        "linear-gradient(135deg, rgba(207, 102, 233, 1), rgba(107, 164, 222, 1))",
                       borderRadius: 4,
                       p: { xs: 3, md: 4 },
-                      color:  isDark ? '#fff' : '#000',
+                      color: isDark ? "#fff" : "#000",
                       textAlign: "center",
                       minHeight: { xs: 220, md: 280 },
                       width: "100%",
@@ -378,8 +406,8 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 4 },
-          backgroundColor:  isDark ? '#0e0e0eff' : '#fff',
-    color: isDark ? '#fff' : '#000',
+          backgroundColor: isDark ? "#0e0e0eff" : "#fff",
+          color: isDark ? "#fff" : "#000",
         }}
       >
         <Container maxWidth="lg">
@@ -389,7 +417,12 @@ const WebsiteDesign = () => {
             sx={{
               textAlign: "center",
               mb: 6,
-              fontSize: { xs: "2rem", md: "2.6rem" },
+              fontSize: { xs: "2rem", md: "2.9rem" },
+               background: "linear-gradient(90deg, #df37bbff, #0984e3)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    fontFamily: 'semiBold'
+                
             }}
           >
             Our Affordable Web Design Plans
@@ -413,7 +446,7 @@ const WebsiteDesign = () => {
                   >
                     <Box
                       sx={{
-                        background: "linear-gradient(135deg, #7b2ff7, #22c1c3)",
+                        background: "linear-gradient(135deg, #c86ad5ff, #5d96e6ff)",
                         color: "#fff",
                         borderRadius: 4,
                         p: 4,
@@ -452,8 +485,8 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor:  isDark ? '#1f1d1dff' : '#fff',
-                       
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
+
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -479,7 +512,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: isDark ? '#fff' : '#000',
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -492,7 +525,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff' : '#fff' ,
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -518,7 +551,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: isDark ? '#fff' : '#000',
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -531,7 +564,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff': '#fff',
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -557,7 +590,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000' 
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -570,7 +603,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -591,7 +624,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -604,7 +637,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -630,7 +663,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -643,7 +676,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff': '#fff',
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -664,7 +697,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -677,7 +710,7 @@ const WebsiteDesign = () => {
                     <Box
                       sx={{
                         mt: 3,
-                        backgroundColor: isDark ? '#1f1d1dff' : '#fff',
+                        backgroundColor: isDark ? "#1f1d1dff" : "#fff",
                         borderRadius: 3,
                         boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                         p: 3,
@@ -698,7 +731,7 @@ const WebsiteDesign = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color: isDark ? "#fff" : "#000",
                           }}
                         >
                           {feature}
@@ -718,7 +751,7 @@ const WebsiteDesign = () => {
         sx={{
           py: { xs: 6, md: 10 },
           px: { xs: 2, md: 0 },
-          backgroundColor: isDark ? '#0a0909ff' : '#fff',
+          backgroundColor: isDark ? "#0a0909ff" : "#fff",
           mt: 8, // adds space after plans
         }}
       >
@@ -729,7 +762,12 @@ const WebsiteDesign = () => {
             sx={{
               textAlign: "center",
               mb: 6,
-              fontSize: { xs: "2rem", md: "2.6rem" },
+              fontSize: { xs: "2rem", md: "2.9rem" },
+               background: "linear-gradient(90deg, #df37bbff, #0984e3)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    fontFamily: 'semiBold'
+                
             }}
           >
             Extra Web Services
@@ -777,7 +815,7 @@ const WebsiteDesign = () => {
               >
                 <Box
                   sx={{
-                    background: "linear-gradient(135deg, #6a11cb, #2575fc)",
+                    background: "linear-gradient(135deg, #dd76e7ff, #437ae1ff)",
                     borderRadius: 4,
                     p: 4,
                     color: "#fff",

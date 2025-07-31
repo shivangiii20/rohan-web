@@ -61,7 +61,7 @@ const plans = [
 
 const OurPlans = ({isDark}) => {
   return (
-    <Box sx={{ py: 8, backgroundColor:  isDark ? '#1e1e1e' : '#f9f9f9', color: isDark ? '#f0f0f0' : '#000', }}>
+    <Box sx={{ py: 8, backgroundColor:  isDark ? '#040404ff' : '#ffffffff', color: isDark ? '#f0f0f0' : '#000', }}>
    <Box sx={{ display: "flex", justifyContent: "center" }}>
   <Typography
     variant="h4"
@@ -71,6 +71,8 @@ const OurPlans = ({isDark}) => {
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       display: "inline-block",
+      
+      fontFamily: 'semiBold'
     }}
   >
     Our Plans
@@ -113,10 +115,10 @@ const OurPlans = ({isDark}) => {
             >
               <Box textAlign="center">
                 <Box mb={1}>{plan.icon}</Box>
-                <Typography variant="h6" fontWeight="bold">
+                <Typography variant="h6" fontWeight="bold"  sx={{ fontFamily: 'semiBold', fontSize: { xs: "1.7rem", md: "1.4em" }, }}>
                   {plan.title}
                 </Typography>
-                <Typography variant="body2" sx={{ mt: 1, mb: 2 }}>
+                <Typography variant="body2" sx={{ mt: 1, mb: 2, fontFamily:'Robot', fontSize: { xs: "0.95rem", md: "1.2rem" }, }}>
                   {plan.desc}
                 </Typography>
               </Box>
@@ -124,7 +126,7 @@ const OurPlans = ({isDark}) => {
               <Box component="ul" sx={{ pl: 2, mb: 2 }}>
                 {plan.features.map((item, i) => (
                   <li key={i}>
-                    <Typography variant="body2">• {item}</Typography>
+                    <Typography variant="body2"  sx={{fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1.3rem" },}}> {item}</Typography>
                   </li>
                 ))}
               </Box>

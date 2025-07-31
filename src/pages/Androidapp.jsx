@@ -73,6 +73,7 @@ const Andriodapp = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               mb: 2,
+              fontFamily: 'semiBold'
             }}
           >
             Build Your Custom Android App
@@ -81,8 +82,9 @@ const Andriodapp = () => {
             variant="body1"
             sx={{
               color: "white",
-              fontSize: { xs: "0.95rem", md: "1.1rem" },
+              fontSize: { xs: "0.98rem", md: "1.4rem" },
               lineHeight: 1.6,
+              fontFamily: 'Robot'
             }}
           >
             We develop fast, secure, and user-friendly Android applications that
@@ -108,10 +110,11 @@ const Andriodapp = () => {
       textAlign: "center",
       fontWeight: "bold",
       mb: 4,
-      fontSize: { xs: "2rem", md: "2.5rem" },
+      fontSize: { xs: "2rem", md: "2.9rem" },
       background: "linear-gradient(135deg, #b066deff, #34cdbbff)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
+      fontFamily: 'semiBold'
     }}
   >
     Technologies We Use to Build Scalable Android Apps
@@ -215,11 +218,12 @@ const Andriodapp = () => {
         variant="h4"
         sx={{
           fontWeight: "bold",
-          fontSize: { xs: "2rem", md: "2.5rem" },
-          background: "linear-gradient(135deg, #c327b1ff, #3a96a8ff)",
+          fontSize: { xs: "2rem", md: "2.7rem" },
+          background: "linear-gradient(135deg, #ce4fbfff, #3a96a8ff)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           mb: 2,
+          fontFamily: 'semiBold'
         }}
       >
         Scalable Apps. Smarter Growth.
@@ -227,8 +231,9 @@ const Andriodapp = () => {
       <Typography
         variant="body1"
         sx={{
-          fontSize: { xs: "1rem", md: "1.1rem" },
+          fontSize: { xs: "1rem", md: "1.4rem" },
           color:  isDark ? '#fff' : '#000',
+          fontFamily: 'Robot'
         }}
       >
         We don’t just build apps — we create experiences. Reach more users,
@@ -260,10 +265,11 @@ const Andriodapp = () => {
       textAlign: "center",
       fontWeight: "bold",
       mb: 4,
-      fontSize: { xs: "2rem", md: "2.5rem" },
-      background: "linear-gradient(135deg, #d240e5, #4fdbea)",
+      fontSize: { xs: "2rem", md: "2.9rem" },
+      background: "linear-gradient(135deg, #dd5eeeff, #4fdbea)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
+      fontFamily: 'semiBold'
     }}
   >
     Types of Android App We Build 🔧

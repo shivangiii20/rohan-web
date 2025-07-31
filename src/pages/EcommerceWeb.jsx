@@ -54,7 +54,8 @@ const EcommerceWeb = () => {
               sx={{
                 color: "white",
                 fontWeight: "bold",
-                fontSize: { xs: "1.7rem", sm: "2rem", md: "2.5rem" },
+                fontSize: { xs: "1.7rem", sm: "2rem", md: "3rem" },
+                fontFamily: 'semiBold'
               }}
             >
               Build Your Dream E-Commerce Store
@@ -64,7 +65,8 @@ const EcommerceWeb = () => {
               sx={{
                 color: "white",
                 mt: 2,
-                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.7rem" },
+                fontFamily: 'Robot'
               }}
             >
               We craft fast, secure, and beautiful online stores tailored for
@@ -117,12 +119,13 @@ const EcommerceWeb = () => {
               variant="h4"
               sx={{
                 fontWeight: "bold",
-                fontSize: { xs: "1.8rem", md: "2.8rem" },
+                fontSize: { xs: "1.8rem", md: "2.9rem" },
                 background:
                   "linear-gradient(90deg, #6ec7e7e1, #3babf6ff, #e5b5e9ff)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 mb: 3,
+                fontFamily: 'semiBold'
               }}
             >
               Make Your E-Commerce Website Now!!!
@@ -132,10 +135,11 @@ const EcommerceWeb = () => {
               variant="body1"
               sx={{
                 color: isDark ? '#fff' : '#000',
-                fontSize: { xs: "1rem", md: "1.2rem" },
+                fontSize: { xs: "1rem", md: "1.4rem" },
                 maxWidth: "800px",
                 mx: "auto",
                 mb: 2,
+                fontFamily: 'Robot'
               }}
             >
               Launch your online store with stunning design, secure payments,
@@ -147,9 +151,10 @@ const EcommerceWeb = () => {
               variant="body1"
               sx={{
                 color: isDark ? '#fff' : '#000',
-                fontSize: { xs: "1rem", md: "1.2rem" },
+                fontSize: { xs: "1rem", md: "1.4rem" },
                 maxWidth: "800px",
                 mx: "auto",
+                fontFamily: 'Robot'
               }}
             >
               Whether you're just starting or scaling up, we’ll help you build a
@@ -191,6 +196,7 @@ const EcommerceWeb = () => {
           py: { xs: 6, md: 10 },
           px: 2,
           backgroundColor: isDark ? '#121212' : '#fff',
+        
         }}
       >
         <Grid container spacing={4} justifyContent="center">
@@ -278,6 +284,11 @@ const EcommerceWeb = () => {
               textAlign: "center",
               mb: 6,
               fontSize: { xs: "2rem", md: "2.6rem" },
+              fontFamily: 'semiBold',
+              background:
+                  "linear-gradient(90deg, #85bed3e1, #3b48f6ff, #e5b5e9ff)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
             }}
           >
             Our Affordable E-commerce Web Plans

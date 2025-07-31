@@ -37,7 +37,7 @@ const ContactCardSection = () => {
         px: 2,
         background: isDark
           ? 'linear-gradient(135deg, #000000ff, #000000ff)'
-          : 'linear-gradient(135deg, #e0f7fa, #e3f2fd)',
+          : 'linear-gradient(135deg, #ffffffff, #ffffffff)',
         textAlign: 'center',
       }}
     >

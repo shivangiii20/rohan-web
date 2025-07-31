@@ -38,7 +38,7 @@ const WhyChooseUs = ({isDark}) => {
         position: 'relative',
         background: theme.palette.mode === 'dark'
           ? '#000000'
-          : '#eef4ff', // light soft background
+          : '#ffffffff', // light soft background
         overflow: 'hidden',
       }}
     >
@@ -57,6 +57,7 @@ const WhyChooseUs = ({isDark}) => {
             background: 'linear-gradient(135deg,rgb(110, 47, 234), #63d2ff)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
+            fontFamily: 'semiBold'
           }}
         >
           Why Choose Us
@@ -76,7 +77,9 @@ const WhyChooseUs = ({isDark}) => {
             maxWidth: 600,
             mx: 'auto',
             fontSize: '1.1rem',
-            color: theme.palette.mode === 'dark' ? '#cbd5e1' : 'blue',
+            color: theme.palette.mode === 'dark' ? '#cbd5e1' : '#000',
+            fontFamily: 'semiBold',
+            fontSize: { xs: "2rem", md: "1.9rem" }
           }}
         >
           We don’t just build websites — we build your digital growth engine. Here’s why businesses trust us.
@@ -100,7 +103,7 @@ const WhyChooseUs = ({isDark}) => {
                 }}
               >
                 <Box mb={2}>{item.icon}</Box>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                <Typography variant="h6" fontWeight="bold" gutterBottom >
                   {item.title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#fff' }}>
@@ -136,10 +139,10 @@ const WhyChooseUs = ({isDark}) => {
                   }}
                 >
                   <Box mb={2}>{item.icon}</Box>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  <Typography variant="h6" fontWeight="bold" gutterBottom sx={{fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" },}}>
                     {item.title}
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body2" sx={{fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1rem" },}}>
                     {item.desc}
                   </Typography>
                 </Paper>

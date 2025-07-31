@@ -76,6 +76,7 @@ const Testimonials = () => {
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       display: "inline-block",
+      fontFamily: 'semiBold'
     }}
   >
     What our Client say
@@ -120,15 +121,15 @@ const Testimonials = () => {
                       sx={{ width: 56, height: 56, mr: 2 }}
                     />
                     <Box>
-                      <Typography variant="subtitle1" fontWeight="bold">
+                      <Typography variant="subtitle1" fontWeight="bold" sx={{fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" },}}>
                         {testimonial.name}
                       </Typography>
-                      <Typography variant="body2" color="white" fontWeight="bold">
+                      <Typography variant="body2" color="white" fontWeight="bold" sx={{fontFamily: 'semiBold', fontSize: { xs: "1rem", md: "1.2rem" },}}>
                         {testimonial.title}
                       </Typography>
                     </Box>
                   </Box>
-                  <Typography variant="body2">
+                  <Typography variant="body2" sx={{fontFamily: 'Robot', fontSize: { xs: "1.4rem", md: "1.2rem" },}}>
                     “{testimonial.message}”
                   </Typography>
                 </Paper>

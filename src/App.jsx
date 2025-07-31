@@ -3,6 +3,7 @@ import { useAppTheme } from './ThemeContext'; // ✅ add at the top
 import { useTheme } from '@mui/material/styles';
 import { CssBaseline, Box } from '@mui/material';
 import Navbar from './components/Navbar';
+import './index.css';
 // Import all the pages
 import Home from './pages/Home';
 import Footer from './components/Footer';

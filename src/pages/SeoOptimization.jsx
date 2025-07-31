@@ -149,8 +149,9 @@ const SeoOptimization = () => {
               display: "inline-block",
               color: "#fff",
               fontWeight: 500,
-              fontSize: "1.1rem",
+              fontSize: "1.5rem",
               px: 4,
+              fontFamily: 'Robot'
             }}
           >
             🔍 On-Page SEO &nbsp; • &nbsp; 📝 Content Optimization &nbsp; •
@@ -192,9 +193,13 @@ const SeoOptimization = () => {
                 variant="h3"
                 fontWeight="bold"
                 sx={{
-                  fontSize: { xs: "2rem", md: "2.8rem" },
+                  fontSize: { xs: "2rem", md: "2.9rem" },
                   color: isDark ? '#fff' : '#000',
                   mb: 2,
+                  fontFamily: 'semiBold',
+                  background: "linear-gradient(90deg, #df37bbff, #0984e3)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
                 }}
               >
                 Our SEO Optimization Strategy
@@ -202,15 +207,14 @@ const SeoOptimization = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: "1.15rem",
-                  color: "#555",
+                  fontSize: { xs: "0.98rem", md: "1.4rem" },
+                  color: isDark ? '#fff' : '#000',
                   maxWidth: "800px",
                   marginX: { xs: "auto", md: 0 },
+                  fontFamily: 'Robot',
                 }}
               >
-                We help your website rank higher on Google through smart keyword
-                research, on-page and off-page optimization, content strategies,
-                and powerful backlinks.
+                Our SEO optimization strategy is designed to boost online visibility, attract targeted traffic, and improve search engine rankings through a combination of on-page and off-page techniques.<br/> We begin by conducting thorough keyword research to identify high-volume, low-competition keywords relevant to your niche. Next, we focus on optimizing website structure, meta tags, headings, and content for both users and search engines.<br/>High-quality content creation is prioritized to establish authority and relevance. Off-page strategies like link building, social bookmarking, and local SEO are employed to enhance domain credibility. <br/> We also ensure mobile responsiveness, fast loading speed, and proper indexing through technical SEO audits. Regular performance tracking using analytics tools allows us to refine and adapt our strategies for maximum results.
               </Typography>
             </Box>
             <Box
@@ -306,7 +310,11 @@ const SeoOptimization = () => {
             sx={{
               textAlign: "center",
               mb: 6,
-              fontSize: { xs: "2rem", md: "2.6rem" },
+              fontSize: { xs: "2rem", md: "2.9rem" },
+              fontFamily: 'semiBold',
+                  background: "linear-gradient(90deg, #df37bbff, #0984e3)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
             }}
           >
             Our Affordable SEO plans

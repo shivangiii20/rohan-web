@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import { useTheme } from "@mui/material/styles"
+import { useTheme } from "@mui/material/styles";
 import animation from "../animation/developer.json";
 import { Box, Typography, Button, Grid } from "@mui/material";
 import BackgroundBubbles from "../components/BackgroundBubbles";
@@ -22,10 +22,9 @@ import MarketingIcon from "@mui/icons-material/Campaign";
 import EcommerceIcon from "@mui/icons-material/ShoppingCart";
 import UiUxIcon from "@mui/icons-material/Brush";
 
-
 const Home = () => {
   const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark';
+  const isDark = theme.palette.mode === "dark";
   return (
     <Box
       sx={{
@@ -37,150 +36,143 @@ const Home = () => {
         zIndex: 0,
         position: "relative",
         overflow: "hidden",
-        background : isDark ? "linear-gradient(135deg, #121212, #1e1e1e)" // or any dark version 
-        : "linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))",
+        background: isDark
+          ? "linear-gradient(135deg, #121212, #1e1e1e)" // or any dark version
+          : "linear-gradient(135deg, rgb(122, 78, 204), rgb(88, 165, 201))",
       }}
     >
       {/* Bubbles Background */}
       <BackgroundBubbles />
 
       {/* Hero Section */}
+<Box
+  sx={{
+    minHeight: "100vh",
+    width: "100%",
+    position: "relative",
+    zIndex: 2,
+    px: { xs: 2, md: 10 },
+    py: { xs: 6, md: 4 },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  }}
+>
+  <Grid
+    container
+    spacing={4}
+    alignItems="center"
+    justifyContent="center"
+    sx={{ flexGrow: 1 }}
+  >
+    {/* Left Side: Animation */}
+    <Grid
+      item
+      xs={12}
+      md={6}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        mt: { xs: 2, md: 0 },
+      }}
+    >
       <Box
         sx={{
-          height: "100vh",
           width: "100%",
-          position: "relative",
-          zIndex: 2,
-          px: { xs: 2, md: 10 },
-          py: { xs: 6, md: 4 },
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          maxWidth: { xs: 280, sm: 350, md: 500, lg: 600 },
         }}
       >
-        {/* Centered Top Heading */}
-        <Typography
-          variant="h3"
-          fontWeight="bold"
-          textAlign="center"
-          mb={6}
-          sx={{ fontSize: { xs: "2rem", md: "3rem" } }}
-        >
-          {/* Empower Your Digital Presence */}
-        </Typography>
-
-        {/* Lottie + Text Grid */}
-        <Grid
-          container
-          spacing={4}
-          alignItems="center"
-          justifyContent="center"
-          sx={{ flexGrow: 1 }}
-        >
-          {/* Left Side: Animation */}
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-start",
-              mt: { xs: 0, md: -4 },
-            }}
-          >
-            <Box
-              sx={{
-                width: { xs: "100%", sm: "80%", md: "100%" },
-                maxWidth: { xs: 300, sm: 400, md: 550, lg: 600 },
-              }}
-            >
-              <Lottie animationData={animation} loop={true} />
-            </Box>
-          </Grid>
-
-          {/* Right Side: Subtext + Buttons */}
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: { xs: "center", md: "flex-start" },
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            <Typography variant="h6" sx={{ mb: 4, maxWidth: 500 }}>
-              We craft stunning websites, mobile apps, and digital solutions to
-              grow your business online.
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                gap: 2,
-                flexWrap: "wrap",
-                justifyContent: { xs: "center", md: "flex-start" },
-              }}
-            >
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ borderRadius: 5, px: 4, py: 1.5, fontWeight: "bold" }}
-              >
-                Get Started
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                sx={{
-                  borderRadius: 5,
-                  px: 4,
-                  py: 1.5,
-                  fontWeight: "bold",
-                  color: theme.palette.text.primary,
-                  borderColor: theme.palette.text.primary,
-                  "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  },
-                }}
-              >
-                View Services
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
+        <Lottie animationData={animation} loop={true} />
       </Box>
+    </Grid>
+
+    {/* Right Side: Subtext + Button */}
+    <Grid
+      item
+      xs={12}
+      md={6}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: { xs: "center", md: "flex-start" },
+        textAlign: { xs: "center", md: "left" },
+        mt: { xs: 2, md: 0 },
+      }}
+    >
+      <Typography
+        variant="h6"
+        sx={{
+          maxWidth: 500,
+          fontFamily: "semiBold",
+          fontSize: { xs: "1rem", md: "1.7rem" },
+        }}
+      >
+        Your One-Stop Digital Growth Partner -
+      </Typography>
+
+      <Typography
+        variant="body1"
+        sx={{
+          color: "#fff",
+          maxWidth: 600,
+          mt: 2,
+          fontSize: { xs: "0.95rem", md: "1.4rem" },
+          fontFamily: "Robot",
+        }}
+      >
+        From eye-catching websites and powerful SEO to mobile apps, branding,
+        and marketing — we deliver everything your business needs to shine
+        online. With a blend of creativity, technology, and strategy, we craft
+        digital experiences that captivate, convert, and grow your brand.
+      </Typography>
+
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{
+          mt: 4,
+          borderRadius: 5,
+          px: 4,
+          py: 1.5,
+          fontWeight: "bold",
+          alignSelf: { xs: "center", md: "flex-start" },
+        }}
+      >
+        Get Started
+      </Button>
+    </Grid>
+  </Grid>
+</Box>
 
       {/* Services Section */}
       <Box
         sx={{
           py: 8,
           width: "100%",
-          backgroundColor: isDark ? "#121212" : "#fff",  // ✅ Fix: dynamic background,
-           color: isDark ? "#f0f0f0" : "#000",
+          backgroundColor: isDark ? "#121212" : "#fff", // ✅ Fix: dynamic background,
+          color: isDark ? "#f0f0f0" : "#000",
           zIndex: 3,
           position: "relative",
-          
         }}
       >
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-  <Typography
-    variant="h4"
-    fontWeight="bold"
-    sx={{
-      background: "linear-gradient(135deg,rgb(145, 25, 205),rgb(96, 172, 223))",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      display: "inline-block",
-      mb: 4,
-    }}
-  >
-    Our Expertise
-  </Typography>
-
-</Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            sx={{
+              background:
+                "linear-gradient(135deg,rgb(145, 25, 205),rgb(96, 172, 223))",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+              mb: 4,
+              fontFamily: "semiBold",
+            }}
+          >
+            Our Expertise
+          </Typography>
+        </Box>
 
         <Grid
           container
@@ -250,7 +242,7 @@ const Home = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
-                 isDark={isDark}
+                isDark={isDark}
               />
             </Grid>
           ))}
@@ -258,18 +250,18 @@ const Home = () => {
 
         {/* Our Plans Section */}
         <OurPlans isDark={isDark} />
-        
+
         {/* Testimonials Section */}
-        <Testimonials/>
+        <Testimonials />
 
         {/* Why Choose us Section */}
-        <WhyChooseUs/>
+        <WhyChooseUs />
 
         {/*FAQ Section*/}
-        <FaqSection isDark={isDark}/>
+        <FaqSection isDark={isDark} />
 
         {/* Contact Card Section */}
-        <ContactCardSection/>
+        <ContactCardSection />
       </Box>
     </Box>
   );
