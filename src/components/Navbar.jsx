@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -16,15 +16,15 @@ import {
   ListItemText,
   Collapse,
   Switch,
-} from '@mui/material';
+} from "@mui/material";
 import {
   ExpandLess,
   ExpandMore,
   Menu as MenuIcon,
   Brightness4,
   Brightness7,
-} from '@mui/icons-material';
-import { Link, useNavigate } from 'react-router-dom';
+} from "@mui/icons-material";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DesignServices,
   TrendingUp,
@@ -32,12 +32,12 @@ import {
   Campaign,
   Android,
   Brush,
-} from '@mui/icons-material';
+} from "@mui/icons-material";
 
 const Navbar = ({ toggleTheme, mode }) => {
   const navigate = useNavigate();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [anchorElServices, setAnchorElServices] = useState(null);
   const handleOpenServices = (e) => setAnchorElServices(e.currentTarget);
@@ -52,12 +52,13 @@ const Navbar = ({ toggleTheme, mode }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const [sidebarServicesOpen, setSidebarServicesOpen] = useState(false);
-  const handleSidebarServicesToggle = () => setSidebarServicesOpen((prev) => !prev);
+  const handleSidebarServicesToggle = () =>
+    setSidebarServicesOpen((prev) => !prev);
 
   return (
     <>
@@ -67,20 +68,20 @@ const Navbar = ({ toggleTheme, mode }) => {
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
           background: isScrolled
-            ? 'linear-gradient(135deg, rgb(130, 46, 203), rgb(125, 200, 209))'
-            : 'transparent',
-          transition: 'background 3s ease-in-out',
-          boxShadow: isScrolled ? 0.8 : 'none',
-          backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          color: '#fff',
+            ? "linear-gradient(135deg, rgb(130, 46, 203), rgb(125, 200, 209))"
+            : "transparent",
+          transition: "background 3s ease-in-out",
+          boxShadow: isScrolled ? 0.8 : "none",
+          backdropFilter: isScrolled ? "blur(10px)" : "none",
+          color: "#fff",
         }}
       >
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography
             variant="h6"
             component={Link}
             to="/"
-            sx={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}
+            sx={{ color: "#fff", textDecoration: "none", fontWeight: "bold" }}
           >
             YourBrand
           </Typography>
@@ -88,85 +89,192 @@ const Navbar = ({ toggleTheme, mode }) => {
           {isMobile ? (
             <Box>
               <IconButton color="inherit" onClick={toggleTheme}>
-                {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                {mode === "dark" ? <Brightness7 /> : <Brightness4 />}
               </IconButton>
               <IconButton color="inherit" onClick={toggleDrawer}>
                 <MenuIcon />
               </IconButton>
             </Box>
           ) : (
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              <Button color="inherit" component={Link} to="/">Home</Button>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Button
+                color="inherit"
+                component={Link}
+                sx={{
+                  fontFamily: "semiBold",
+                  fontSize: { xs: "0.85rem", md: "1.4rem", color: 'white',
+    '&:hover': {
+      background: 'linear-gradient(135deg, #6EE7B7, #3B82F6)',
+      color: '#fff',
+      borderRadius: '8px',
+    },},
+                }}
+                to="/"
+              >
+                Home
+              </Button>
+              <Button
+                sx={{
+                  fontFamily: "semiBold",
+                  fontSize: {
+                    xs: "0.85rem",
+                    md: "1.4rem",
+                    color: "white",
+                    "&:hover": {
+                      background: "linear-gradient(135deg, #6EE7B7, #3B82F6)",
+                      color: "#fff",
+                      borderRadius: "8px",
+                    },
+                  },
+                }}
                 color="inherit"
                 onClick={handleOpenServices}
                 endIcon={anchorElServices ? <ExpandLess /> : <ExpandMore />}
               >
                 Services
               </Button>
-             <Menu
-  anchorEl={anchorElServices}
-  open={Boolean(anchorElServices)}
-  onClose={handleCloseServices}
-  MenuListProps={{
-    sx: {
-      background: 'linear-gradient(135deg, #7f00ff, #e100ff)',
-      color: '#fff',
-      px: 1,
-       width: { xs: 220, sm: 240, md: 260, lg: 300 }, // width adjusts by screen size
-    },
-  }}
->
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/website-designing'); }}
-    sx={{ gap: 1 }}
-  >
-    <DesignServices sx={{ fontSize: 20 }} />
-    Website Designing
-  </MenuItem>
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/seo-optimization'); }}
-    sx={{ gap: 1 }}
-  >
-    <TrendingUp sx={{ fontSize: 20 }} />
-    SEO Optimization
-  </MenuItem>
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/ecommerce-website'); }}
-    sx={{ gap: 1 }}
-  >
-    <ShoppingCart sx={{ fontSize: 20 }} />
-    E-Commerce Website
-  </MenuItem>
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/digital-marketing'); }}
-    sx={{ gap: 1 }}
-  >
-    <Campaign sx={{ fontSize: 20 }} />
-    Digital Marketing
-  </MenuItem>
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/android-app-development'); }}
-    sx={{ gap: 1 }}
-  >
-    <Android sx={{ fontSize: 20 }} />
-    Android App Development
-  </MenuItem>
-  <MenuItem
-    onClick={() => { handleCloseServices(); navigate('/graphic-designing'); }}
-    sx={{ gap: 1 }}
-  >
-    <Brush sx={{ fontSize: 20 }} />
-    Graphic Designing
-  </MenuItem>
-</Menu>
+              <Menu
+                anchorEl={anchorElServices}
+                open={Boolean(anchorElServices)}
+                onClose={handleCloseServices}
+                MenuListProps={{
+                  sx: {
+                    background: "linear-gradient(135deg, #6698e3ff, #e100ff)",
+                    color: "#fff",
+                    px: 1,
+                    width: { xs: 220, sm: 240, md: 260, lg: 300 }, // width adjusts by screen size
+                  },
+                }}
+              >
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/website-designing");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <DesignServices sx={{ fontSize: 20 }} />
+                  Website Designing
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/seo-optimization");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <TrendingUp sx={{ fontSize: 20 }} />
+                  SEO Optimization
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/ecommerce-website");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <ShoppingCart sx={{ fontSize: 20 }} />
+                  E-Commerce Website
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/digital-marketing");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <Campaign sx={{ fontSize: 20 }} />
+                  Digital Marketing
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/android-app-development");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <Android sx={{ fontSize: 20 }} />
+                  Android App Development
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseServices();
+                    navigate("/graphic-designing");
+                  }}
+                  sx={{
+                    gap: 1,
+                    fontFamily: "Robot",
+                    fontSize: { xs: "0.85rem", md: "1.2rem" },
+                  }}
+                >
+                  <Brush sx={{ fontSize: 20 }} />
+                  Graphic Designing
+                </MenuItem>
+              </Menu>
 
-
-              <Button color="inherit" component={Link} to="/portfolio">Portfolio</Button>
-              <Button color="inherit" component={Link} to="/contact">Contact</Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/portfolio"
+                sx={{
+                  fontFamily: "semiBold",
+                  fontSize: {
+                    xs: "0.85rem",
+                    md: "1.4rem",
+                    color: "white",
+                    "&:hover": {
+                      background: "linear-gradient(135deg, #6EE7B7, #3B82F6)",
+                      color: "#fff",
+                      borderRadius: "8px",
+                    },
+                  },
+                }}
+              >
+                Portfolio
+              </Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/contact"
+                sx={{
+                  fontFamily: "semiBold",
+                  fontSize: {
+                    xs: "0.85rem",
+                    md: "1.4rem",
+                    color: "white",
+                    "&:hover": {
+                      background: "linear-gradient(135deg, #6EE7B7, #3B82F6)",
+                      color: "#fff",
+                      borderRadius: "8px",
+                    },
+                  },
+                }}
+              >
+                Contact
+              </Button>
 
               <IconButton color="inherit" onClick={toggleTheme}>
-                {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                {mode === "dark" ? <Brightness7 /> : <Brightness4 />}
               </IconButton>
             </Box>
           )}
@@ -175,10 +283,21 @@ const Navbar = ({ toggleTheme, mode }) => {
 
       {/* Drawer for Mobile */}
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-        <Box sx={{ width: 250, p: 2 }}>
+        <Box
+          sx={{
+            width: 250,
+            height: "100vh",
+            p: 2,
+            bgcolor: theme.palette.mode === "dark" ? "#121212" : "#fff",
+            color: theme.palette.mode === "dark" ? "#fff" : "#000",
+            "*": {
+              fontFamily: "semiBold !important", // apply forcibly to all nested elements
+            },
+          }}
+        >
           <List>
-            <ListItem button component={Link} to="/" onClick={toggleDrawer}>
-              <ListItemText primary="Home" />
+            <ListItem button component={Link} to="/" onClick={toggleDrawer} >
+              <ListItemText primary="Home" sx={{ fontFamily: "semiBold" }} />
             </ListItem>
 
             <ListItem button onClick={handleSidebarServicesToggle}>
@@ -186,58 +305,94 @@ const Navbar = ({ toggleTheme, mode }) => {
               {sidebarServicesOpen ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             <Collapse in={sidebarServicesOpen} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding
-               sx={{
-      background: 'linear-gradient(135deg, #7f00ff, #e100ff)',
-      color: '#fff',
-      borderRadius: 1,
-      mt: 1,
-      mb: 2,
-      py: 1,
-    }}
+              <List
+                component="div"
+                disablePadding
+                sx={{
+                  background: "linear-gradient(135deg, #6cdcdeff, #e100ff)",
+
+                  color: "#fff",
+                  borderRadius: 1,
+                  mt: 1,
+                  mb: 2,
+                  py: 1,
+                }}
               >
                 {[
-      { text: 'Website Designing', path: '/website-designing', icon: <DesignServices sx={{ fontSize: 20, mr: 1 }} /> },
-      { text: 'SEO Optimization', path: '/seo-optimization', icon: <TrendingUp sx={{ fontSize: 20, mr: 1 }} /> },
-      { text: 'E-Commerce Website', path: '/ecommerce-website', icon: <ShoppingCart sx={{ fontSize: 20, mr: 1 }} /> },
-      { text: 'Digital Marketing', path: '/digital-marketing', icon: <Campaign sx={{ fontSize: 20, mr: 1 }} /> },
-      { text: 'Android App Development', path: '/android-app-development', icon: <Android sx={{ fontSize: 20, mr: 1 }} /> },
-      { text: 'Graphic Designing', path: '/graphic-designing', icon: <Brush sx={{ fontSize: 20, mr: 1 }} /> },
-    ].map(({ text, path, icon }) => (
-      <ListItem
-        key={path}
-        button
-        onClick={() => {
-          toggleDrawer();
-          navigate(path);
-        }}
-        sx={{
-          pl: 3,
-          py: 1,
-          '&:hover': {
-            background: 'rgba(255, 255, 255, 0.1)',
-          },
-        }}
-      >
-        {icon}
-        <ListItemText primary={text} />
-      </ListItem>
-    ))}
-  </List>
-</Collapse>
-                  
+                  {
+                    text: "Website Designing",
+                    path: "/website-designing",
+                    icon: <DesignServices sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                  {
+                    text: "SEO Optimization",
+                    path: "/seo-optimization",
+                    icon: <TrendingUp sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                  {
+                    text: "E-Commerce Website",
+                    path: "/ecommerce-website",
+                    icon: <ShoppingCart sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                  {
+                    text: "Digital Marketing",
+                    path: "/digital-marketing",
+                    icon: <Campaign sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                  {
+                    text: "Android App Development",
+                    path: "/android-app-development",
+                    icon: <Android sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                  {
+                    text: "Graphic Designing",
+                    path: "/graphic-designing",
+                    icon: <Brush sx={{ fontSize: 20, mr: 1 }} />,
+                  },
+                ].map(({ text, path, icon }) => (
+                  <ListItem
+                    key={path}
+                    button
+                    onClick={() => {
+                      toggleDrawer();
+                      navigate(path);
+                    }}
+                    sx={{
+                      pl: 3,
+                      py: 1,
+                      "&:hover": {
+                        background: "rgba(212, 35, 35, 0.1)",
+                      },
+                    }}
+                  >
+                    {icon}
+                    <ListItemText primary={text} />
+                  </ListItem>
+                ))}
+              </List>
+            </Collapse>
 
-            <ListItem button component={Link} to="/portfolio" onClick={toggleDrawer}>
+            <ListItem
+              button
+              component={Link}
+              to="/portfolio"
+              onClick={toggleDrawer}
+            >
               <ListItemText primary="Portfolio" />
             </ListItem>
 
-            <ListItem button component={Link} to="/contact" onClick={toggleDrawer}>
+            <ListItem
+              button
+              component={Link}
+              to="/contact"
+              onClick={toggleDrawer}
+            >
               <ListItemText primary="Contact" />
             </ListItem>
 
             <ListItem>
               <Brightness4 sx={{ mr: 1 }} />
-              <Switch checked={mode === 'dark'} onChange={toggleTheme} />
+              <Switch checked={mode === "dark"} onChange={toggleTheme} />
             </ListItem>
           </List>
         </Box>

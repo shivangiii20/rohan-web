@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import Lottie from "lottie-react";
 import { useTheme } from '@mui/material/styles';
 import ecommerce from "../animation/ecommerce.json";
@@ -8,6 +8,41 @@ import { motion } from "framer-motion";
 const EcommerceWeb = () => {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
+
+    const ecommerceCards = [
+    {
+      title: "Product Catalog",
+      description: "Display unlimited products with categories, filters & search options.",
+    },
+    {
+      title: "Secure Payment Integration",
+      description: "Integrated gateways like Razorpay, Paytm, and Stripe for safe checkout.",
+    },
+    {
+      title: "Mobile-First Design",
+      description: "Responsive UI that works flawlessly across all screen sizes.",
+    },
+    {
+      title: "Fast Checkout",
+      description: "Lightning fast checkout with optimized user flow and autofill support.",
+    },
+    {
+      title: "Custom Admin Panel",
+      description: "Easy-to-use backend to manage orders, inventory, and settings.",
+    },
+    {
+      title: "SEO Optimization",
+      description: "Boost search visibility with meta tags, schema, and clean URLs.",
+    },
+    {
+      title: "Customer Login & Tracking",
+      description: "User accounts, order tracking, and wishlists for a seamless experience.",
+    },
+    {
+      title: "Scalable Infrastructure",
+      description: "Built to grow with your business, supporting high traffic and load.",
+    },
+  ];
   return (
     <>
       <Box
@@ -190,26 +225,16 @@ const EcommerceWeb = () => {
       </Box>
 
       {/* Cards Section */}
-
+ {/* ✅ Updated Cards Section */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
           px: 2,
           backgroundColor: isDark ? '#121212' : '#fff',
-        
         }}
       >
         <Grid container spacing={4} justifyContent="center">
-          {[
-            "Product Catalog",
-            "Secure Payment Integration",
-            "Mobile-First Design",
-            "Fast Checkout",
-            "Custom Admin Panel",
-            "SEO Optimization",
-            "Customer Login & Tracking",
-            "Scalable Infrastructure",
-          ].map((title, i) => (
+          {ecommerceCards.map((card, i) => (
             <Grid
               item
               xs={12}
@@ -232,32 +257,37 @@ const EcommerceWeb = () => {
                 animation: `fadeInUp 0.6s ease ${(i + 1) * 0.1}s both`,
               }}
             >
-              <Box
-                sx={{
-                  width: "100%",
-                  maxWidth: 280,
-                  height: "100%",
-                  p: 3,
-                  borderRadius: "20px",
-                  background:
-                    "linear-gradient(90deg, #6EE7B7, #3B82F6, #9333EA)",
-                  color: "#fff",
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-8px) scale(1.03)",
-                    boxShadow: "0 12px 35px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                style={{ width: "100%", maxWidth: 280 }}
               >
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  {title}
-                </Typography>
-                <Typography variant="body2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  vel risus commodo.
-                </Typography>
-              </Box>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    p: 3,
+                    borderRadius: "20px",
+                    background: "linear-gradient(90deg, #6adbe1ff, rgba(120, 145, 186, 1), #9550d5ff)",
+                    color: "#fff",
+                    boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "&:hover": {
+                      transform: "translateY(-8px) scale(1.03)",
+                      boxShadow: "0 12px 35px rgba(0, 0, 0, 0.2)",
+                    },
+                  }}
+                >
+                  <Typography variant="h6" fontWeight="bold" gutterBottom sx={{ fontFamily: 'semiBold', fontSize: { xs: "1rem", md: "1.3rem" }, }}>
+                    {card.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1rem" },}}>
+                    {card.description}
+                  </Typography>
+                </Box>
+              </motion.div>
             </Grid>
           ))}
         </Grid>
@@ -286,7 +316,7 @@ const EcommerceWeb = () => {
               fontSize: { xs: "2rem", md: "2.6rem" },
               fontFamily: 'semiBold',
               background:
-                  "linear-gradient(90deg, #85bed3e1, #3b48f6ff, #e5b5e9ff)",
+                  "linear-gradient(90deg, #ef0fe0e1, #73ccdcff, #162be8ff)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
             }}
@@ -312,7 +342,7 @@ const EcommerceWeb = () => {
                   >
                     <Box
                       sx={{
-                        background: "linear-gradient(135deg, #7b2ff7, #22c1c3)",
+                        background: "linear-gradient(135deg, #d04fd6ff, #3ecfdfff)",
                         color: "#fff",
                         borderRadius: 4,
                         p: 4,
@@ -324,25 +354,56 @@ const EcommerceWeb = () => {
                         },
                       }}
                     >
-                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
+                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" }, }}>
                         {title}
                       </Typography>
-                      <Box
-                        component="button"
-                        sx={{
-                          backgroundColor: "#fff",
-                          color: "#333",
-                          border: "none",
-                          px: 3,
-                          py: 1,
-                          borderRadius: 2,
-                          fontWeight: "bold",
-                          cursor: "pointer",
-                          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        Order Now
-                      </Box>
+                          {/* 💸 Price detail added here */}
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            mb: 1,
+                            fontWeight: 600,
+                            fontSize: "1rem",
+                            color: "#ffffff",
+                            opacity: 0.9,
+                            fontFamily: 'semiBold',
+                            fontSize: { xs: "0.95rem", md: "1.3rem"},
+                              }}
+                        >
+                          {title === "Basic Plan"
+                            ? "Starting at ₹9999"
+                            : title === "Starter Plan"
+                            ? "Starting at ₹14,999"
+                            : title === "Business Plan"
+                            ? "Starting at  ₹24,999"
+                            : title === "Pro Plan"
+                            ? "Starting at ₹49,999"
+                            :""   
+                          }
+                        </Typography>
+                     {/* made changes here for button */}
+                    <Button
+                      variant="contained"
+                      sx={{
+                        mt: 2,
+                        backgroundColor: "#fff",
+                        color: "#333",
+                        fontWeight: "bold",
+                        px: 3,
+                        py: 1,
+                        borderRadius: 2,
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "#56e297ff",
+                          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                          fontFamily: 'semiBold',
+                          fontSize: { xs: "0.85rem", md: "1rem"},
+                        },
+                      }}
+                    >
+                      Order Now
+                    </Button>
                     </Box>
                   </motion.div>
 
@@ -380,6 +441,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -421,6 +484,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -454,6 +519,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -499,6 +566,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -535,6 +604,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -580,6 +651,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -616,6 +689,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -650,6 +725,8 @@ const EcommerceWeb = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}

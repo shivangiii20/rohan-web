@@ -27,7 +27,7 @@ function App() {
     <>
     <Box
     sx={{
-      bgcolor: isDark ? '#121212' : '#ffffff',
+      bgcolor: isDark ? '#000000ff' : '#ffffff',
       color: isDark ? '#fff' : '#000',
       minHeight: '100vh',
     }}

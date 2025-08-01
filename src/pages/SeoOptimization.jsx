@@ -1,5 +1,5 @@
 // import React from "react";
-import { Box, Container, Typography, Grid, } from "@mui/material";
+import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
@@ -284,7 +284,7 @@ const SeoOptimization = () => {
                 }}
               >
                 <Box sx={{ mb: 1 }}>{card.icon}</Box>
-                <Box sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                <Box sx={{ fontSize: { xs: "1.1rem", md: "1.4rem" }, fontWeight: "bold", fontFamily:'semiBold' }}>
                   {card.title}
                 </Box>
               </Box>
@@ -350,25 +350,56 @@ const SeoOptimization = () => {
                         },
                       }}
                     >
-                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
+                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, fontFamily: 'semibold', fontSize: { xs: "1.4rem", md: "1.7rem" }, }}>
                         {title}
                       </Typography>
-                      <Box
-                        component="button"
-                        sx={{
-                          backgroundColor: "#fff",
-                          color: "#333",
-                          border: "none",
-                          px: 3,
-                          py: 1,
-                          borderRadius: 2,
-                          fontWeight: "bold",
-                          cursor: "pointer",
-                          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        Order Now
-                      </Box>
+                      {/* 💸 Price detail added here */}
+                                              <Typography
+                                                variant="body2"
+                                                sx={{
+                                                  mb: 1,
+                                                  fontWeight: 600,
+                                                  fontSize: "1rem",
+                                                  color: "#ffffff",
+                                                  opacity: 0.9,
+                                                  fontFamily: 'semiBold',
+                                                  fontSize: { xs: "0.95rem", md: "1.3rem"},
+                                                    }}
+                                              >
+                                                {title === "Basic Plan"
+                                                  ? "Starting at ₹8999"
+                                                  : title === "Starter Plan"
+                                                  ? "Starting at ₹19,999"
+                                                  : title === "Business Plan"
+                                                  ? "Starting at  ₹34,999"
+                                                  : title === "Pro Plan"
+                                                  ? "Starting at ₹49,999"
+                                                  :""   
+                                                }
+                                              </Typography>
+                    {/* made changes here for button */}
+                    <Button
+                      variant="contained"
+                      sx={{
+                        mt: 2,
+                        backgroundColor: "#fff",
+                        color: "#333",
+                        fontWeight: "bold",
+                        px: 3,
+                        py: 1,
+                        borderRadius: 2,
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "#56e297ff",
+                          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                          fontFamily: 'semiBold',
+                          fontSize: { xs: "0.85rem", md: "1rem"},
+                        },
+                      }}
+                    >
+                      Order Now
+                    </Button>
                     </Box>
                   </motion.div>
 
@@ -408,6 +439,8 @@ const SeoOptimization = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -451,6 +484,8 @@ const SeoOptimization = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -484,7 +519,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color:  isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -527,7 +564,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color:  isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -573,7 +612,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color:  isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -616,7 +657,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color:  isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -662,7 +705,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color: isDark ? '#fff' : '#000'
+                            color: isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -701,7 +746,9 @@ const SeoOptimization = () => {
                             pb: 1,
                             mb: 1,
                             fontSize: "0.95rem",
-                            color:  isDark ? '#fff' : '#000'
+                            color:  isDark ? '#fff' : '#000',
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}

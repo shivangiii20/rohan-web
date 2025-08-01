@@ -26,7 +26,7 @@ const plans = [
     ],
     price: "₹24,999",
     link: "/services/app-development",
-  },
+  },   
   {
     icon: <DevicesIcon fontSize="large" />,
     title: "Website Designing & Development",

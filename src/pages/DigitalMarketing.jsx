@@ -226,7 +226,7 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontSize: { xs: "1.2rem", md: "1.4rem" },
               fontFamily: 'Robot'
             }}
           >
@@ -265,7 +265,7 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontSize: { xs: "1.2rem", md: "1.4rem" },
               fontFamily: 'Robot'
             }}
           >
@@ -304,7 +304,7 @@ const DigitalMarketing = () => {
               textAlign: "center",
               maxWidth: "700px",
               mx: "auto",
-              fontSize: { xs: "0.95rem", md: "1.4rem" },
+              fontSize: { xs: "1.2rem", md: "1.4rem" },
               fontFamily: 'Robot'
             }}
           >
@@ -314,6 +314,7 @@ const DigitalMarketing = () => {
           </Typography>
         </motion.div>
       </Box>
+      <br/>
 
       {/* Feature Cards */}
       <Box sx={{ py: 8, px: { xs: 2, md: 6 }, background: isDark ? '#121212' : '#fff', }}>
@@ -388,10 +389,10 @@ const DigitalMarketing = () => {
                 }}
               >
                 <Box sx={{ mb: 1 }}>{card.icon}</Box>
-                <Box sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                <Box sx={{ fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" }, fontWeight: "bold" }}>
                   {card.title}
                 </Box>
-                <Box sx={{ fontSize: "0.9rem", opacity: 0.9 }}>{card.desc}</Box>
+                <Box sx={{ fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1.2rem" }, opacity: 0.9 }}>{card.desc}</Box>
               </Box>
             ))}
           </Box>
@@ -462,9 +463,31 @@ const DigitalMarketing = () => {
                       },
                     }}
                   >
-                    <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
+                    <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, fontFamily: 'semiBold', fontSize: { xs: "1.2rem", md: "1.4rem" }, }}>
                       {title}
                     </Typography>
+                    {/* 💸 Price detail added here */}
+                                            <Typography
+                                              variant="body2"
+                                              sx={{
+                                                mb: 1,
+                                                fontWeight: 600,
+                                                fontSize: "1rem",
+                                                color: "#ffffff",
+                                                opacity: 0.9,
+                                                fontFamily: 'semiBold',
+                                                fontSize: { xs: "0.95rem", md: "1.3rem"},
+                                                  }}
+                                            >
+                                              {title === "Google or Facebook or Instagram Pack"
+                                                ? "Starting at ₹6999/month"
+                                                : title === "Google + Facebook + Instagram"
+                                                ? "Starting at ₹12999/month"
+                                                : title === "Google+FB+Insta+Email Campaign"
+                                                ? "Starting at  ₹14999/month"
+                                                :"" 
+                                              }
+                                            </Typography>
 
                 {/* made changes here for button */}
                     <Button
@@ -482,7 +505,9 @@ const DigitalMarketing = () => {
                         "&:hover": {
                           backgroundColor: "#56e297ff",
                           boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                        },
+                          fontFamily: 'semiBold',
+                          fontSize: { xs: "1.4rem", md: "1rem"},
+                          },
                       }}
                     >
                       Order Now
@@ -521,6 +546,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}
@@ -559,6 +586,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}
@@ -592,6 +621,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}
@@ -630,6 +661,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}
@@ -665,6 +698,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}
@@ -700,6 +735,8 @@ const DigitalMarketing = () => {
                           mb: 1,
                           fontSize: "0.95rem",
                           color:  isDark ? '#fff' : '#000',
+                           fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                         }}
                       >
                         {feature}

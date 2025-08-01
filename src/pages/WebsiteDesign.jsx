@@ -7,6 +7,7 @@ import {
   Grid,
   Card,
   CardContent,
+  Button
 } from "@mui/material";
 import { motion } from "framer-motion";
 import BackgroundBubbles from "../components/BackgroundBubbles";
@@ -144,7 +145,7 @@ const WebsiteDesign = () => {
                   >
                     <CardContent>
                       <Box mb={2}>{card.icon}</Box>
-                      <Typography variant="h6" fontWeight="bold">
+                      <Typography sx={{fontFamily: 'Robot'}}>
                         {card.title}
                       </Typography>
                     </CardContent>
@@ -387,10 +388,10 @@ const WebsiteDesign = () => {
                     <Typography variant="h4" mb={1}>
                       {item.icon}
                     </Typography>
-                    <Typography variant="h6" fontWeight="bold" mb={1}>
+                    <Typography variant="h6" sx={{fontFamily: 'Robot' , fontSize: { xs: "1.4rem", md: "1.7rem" },}} mb={1}>
                       {item.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ opacity: 0.95 }}>
+                    <Typography variant="body2" sx={{ opacity: 0.95, fontFamily: 'semiBold', fontSize: { xs: "1rem", md: "1rem" }, }}>
                       {item.text}
                     </Typography>
                   </Box>
@@ -458,25 +459,54 @@ const WebsiteDesign = () => {
                         },
                       }}
                     >
-                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>
+                      <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, fontFamily: 'semiBold', fontSize: { xs: "1.4rem", md: "1.7rem" }, }}>
                         {title}
                       </Typography>
-                      <Box
-                        component="button"
-                        sx={{
-                          backgroundColor: "#fff",
-                          color: "#333",
-                          border: "none",
-                          px: 3,
-                          py: 1,
-                          borderRadius: 2,
-                          fontWeight: "bold",
-                          cursor: "pointer",
-                          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        Order Now
-                      </Box>
+                      {/* 💸 Price detail added here */}
+                                              <Typography
+                                                variant="body2"
+                                                sx={{
+                                                  mb: 1,
+                                                  fontWeight: 600,
+                                                  fontSize: "1rem",
+                                                  color: "#ffffff",
+                                                  opacity: 0.9,
+                                                  fontFamily: 'semiBold',
+                                                  fontSize: { xs: "0.95rem", md: "1.3rem"},
+                                                    }}
+                                              >
+                                                {title === "Basic Plan"
+                                                  ? "Starting at ₹4999"
+                                                  : title === "Starter Plan"
+                                                  ? "Starting at ₹9999"
+                                                  : title === "Business Plan"
+                                                  ? "Starting at  ₹14,999"
+                                                  : title === "Pro Plan"
+                                                  ? "Starting at ₹24,999"
+                                                  :""   
+                                                }
+                                              </Typography>
+                      {/* made changes here for button */}
+                    <Button
+                      variant="contained"
+                      sx={{
+                        mt: 2,
+                        backgroundColor: "#fff",
+                        color: "#333",
+                        fontWeight: "bold",
+                        px: 3,
+                        py: 1,
+                        borderRadius: 2,
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "#56e297ff",
+                          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                        },
+                      }}
+                    >
+                      Order Now
+                    </Button>
                     </Box>
                   </motion.div>
 
@@ -511,8 +541,11 @@ const WebsiteDesign = () => {
                               idx !== 8 ? "1px dashed #ddd" : "none",
                             pb: 1,
                             mb: 1,
-                            fontSize: "0.95rem",
+                            // fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
+                            
                           }}
                         >
                           {feature}
@@ -552,6 +585,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -591,6 +626,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -625,6 +662,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -664,6 +703,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -698,6 +739,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -732,6 +775,8 @@ const WebsiteDesign = () => {
                             mb: 1,
                             fontSize: "0.95rem",
                             color: isDark ? "#fff" : "#000",
+                            fontFamily: 'Robot',
+                            fontSize: { xs: "0.85rem", md: "1rem" },
                           }}
                         >
                           {feature}
@@ -832,10 +877,10 @@ const WebsiteDesign = () => {
                     },
                   }}
                 >
-                  <Typography variant="h6" fontWeight="bold" mb={1}>
+                  <Typography variant="h6" fontWeight="bold" sx={{fontFamily: 'semibold', fontSize: { xs: "1rem", md: "1.3rem" },}} mb={1}>
                     {service.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  <Typography variant="body2" sx={{ opacity: 0.9, fontFamily: 'Robot', fontSize: { xs: "1rem", md: "1.2rem" }, }}>
                     {service.description}
                   </Typography>
                 </Box>

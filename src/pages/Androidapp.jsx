@@ -160,10 +160,12 @@ const Andriodapp = () => {
           }}
         >
           <Box sx={{ mb: 1 }}>{tech.icon}</Box>
-          <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+          <Typography variant="h6" sx={{  fontFamily: 'Robot',
+                            fontSize: { xs: "1rem", md: "2rem" }, mb: 1 }}>
             {tech.title}
           </Typography>
-          <Typography variant="body2" sx={{ fontSize: "0.95rem" }}>
+          <Typography variant="body2" sx={{  fontFamily: 'semiBold',
+                            fontSize: { xs: "0.95rem", md: "1.2rem" }, }}>
             {tech.desc}
           </Typography>
         </Box>
@@ -290,7 +292,7 @@ const Andriodapp = () => {
     {[
       { icon: <Business fontSize="large" />, title: "Business Apps" },
       { icon: <School fontSize="large" />, title: "Educational Apps" },
-      { icon: <LocalMall fontSize="large" />, title: "eCommerce Apps" },
+      { icon: <LocalMall fontSize="large" />, title: "E-Commerce Apps" },
       { icon: <SportsEsports fontSize="large" />, title: "Gaming Apps" },
       { icon: <Favorite fontSize="large" />, title: "Fitness & Health" },
       { icon: <FlightTakeoff fontSize="large" />, title: "Travel Apps" },
@@ -318,7 +320,8 @@ const Andriodapp = () => {
         }}
       >
         <Box sx={{ mb: 1 }}>{card.icon}</Box>
-        <Typography sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+        <Typography sx={{ fontWeight: "bold",  fontFamily: 'semiBold',
+                            fontSize: { xs: "0.85rem", md: "1.4rem" }, }}>
           {card.title}
         </Typography>
       </Box>
