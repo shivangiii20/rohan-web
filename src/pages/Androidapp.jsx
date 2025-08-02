@@ -7,6 +7,7 @@ import { Code, Android, IntegrationInstructions } from "@mui/icons-material";
 import kotlin from "../animation/kotlin.json";
 import { motion } from "framer-motion";
 import {  Business, School, LocalMall, SportsEsports, Favorite, FlightTakeoff, LocalHospital, Security, Group, Restaurant, ShoppingCart } from "@mui/icons-material";
+import ContactCardSection from "../components/ContactCardSection";
 
 const Andriodapp = () => {
   const theme = useTheme();
@@ -327,6 +328,8 @@ const Andriodapp = () => {
       </Box>
     ))}
   </Box>
+
+  <ContactCardSection/>
 </Box>
 
 

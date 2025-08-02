@@ -7,6 +7,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
+import ContactCardSection from "../components/ContactCardSection";
 const GraphicDesign = () => {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
@@ -655,7 +656,7 @@ const GraphicDesign = () => {
         </Container>
       </Box>
 
-
+<ContactCardSection/>
 
     </>
   );

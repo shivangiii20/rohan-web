@@ -14,6 +14,9 @@ import BackgroundBubbles from "../components/BackgroundBubbles";
 import { FaJava, FaPhp, FaBootstrap, FaCuttlefish } from "react-icons/fa";
 import Lottie from "lottie-react";
 import websitedesign from "../animation/websitedesign.json";
+import ContactCardSection from "../components/ContactCardSection";
+
+
 
 const techCards = [
   {
@@ -889,6 +892,7 @@ const WebsiteDesign = () => {
           </Box>
         </Container>
       </Box>
+      <ContactCardSection/>
     </>
   );
 };

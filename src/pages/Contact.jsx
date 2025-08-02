@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import { GlobalStyles } from '@mui/material';
 import {
   Box,
   Container,
@@ -8,7 +10,6 @@ import {
   Snackbar,
   Alert,
   InputAdornment,
-  useTheme,
   Grid,
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
@@ -21,6 +22,8 @@ import Lottie from "lottie-react";
 import contactAnimation from "../animation/contact.json"; // Ensure this path is correct
 
 const Contact = () => {
+  const theme = useTheme();
+    const isDark = theme.palette.mode === "dark";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +31,7 @@ const Contact = () => {
     project: "",
   });
   const [success, setSuccess] = useState(false);
-  const theme = useTheme();
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -126,17 +129,34 @@ const Contact = () => {
                     fontSize: { xs: "1.8rem", md: "2.4rem" },
                     mb: 3,
                     mt: 2,
-                    background: "linear-gradient(135deg, #ff6ec4, #7873f5)",
+                    background: "linear-gradient(135deg, #ec2bdcff, #39e6d8ff)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundSize: "200% auto",
                     animation: "shinyText 4s linear infinite",
+                    fontFamily: 'semiBold',
                   }}
                 >
                   Write Us a Message
                 </Typography>
 
                 <Box component="form" onSubmit={handleSubmit} noValidate>
+   <GlobalStyles
+        styles={{
+          'input:-webkit-autofill': {
+            boxShadow: `0 0 0 1000px ${
+              isDark ? "#121212" : "#fff"
+            } inset !important`,
+            WebkitBoxShadow: `0 0 0 1000px ${
+              isDark ? "#121212" : "#fff"
+            } inset !important`,
+            WebkitTextFillColor: isDark ? "#fff" : "#000",
+            caretColor: isDark ? "#fff" : "#000",
+            transition: "background-color 9999s ease-in-out 0s !important",
+          },
+        }}
+      />
+
                   <TextField
                     label="Name"
                     name="name"
@@ -144,7 +164,15 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    sx={{ my: 2 }}
+                    sx={{ my: 2 , "& .MuiInputBase-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.1rem", md: "1.4rem" }, // input text size
+  },
+  "& .MuiInputLabel-root": {
+   
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.2rem", md: "1.8rem" }, // label size
+  },}}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
@@ -161,7 +189,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    sx={{ my: 2 }}
+                    sx={{ my: 2, "& .MuiInputBase-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.1rem", md: "1.4rem" }, // input text size
+  },
+  "& .MuiInputLabel-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.2rem", md: "1.8rem" }, // label size
+  }, }}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
@@ -177,7 +212,14 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    sx={{ my: 2 }}
+                    sx={{ my: 2,"& .MuiInputBase-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.1rem", md: "1.4rem" }, // input text size
+  },
+  "& .MuiInputLabel-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.2rem", md: "1.8rem" }, // label size
+  }, }}
                     inputProps={{ maxLength: 10 }}
                     InputProps={{
                       startAdornment: (
@@ -196,7 +238,14 @@ const Contact = () => {
                     value={formData.project}
                     onChange={handleChange}
                     required
-                    sx={{ my: 2 }}
+                    sx={{ my: 2, "& .MuiInputBase-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.1rem", md: "1.4rem" }, // input text size
+  },
+  "& .MuiInputLabel-root": {
+    fontFamily: 'semiBold',
+    fontSize: { xs: "1.2rem", md: "1.8rem" }, // label size
+  }, }}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
@@ -212,14 +261,16 @@ const Contact = () => {
                     sx={{
                       mt: 2,
                       borderRadius: 50,
+                      fontFamily: 'semiBold',
                       py: 1.5,
                       background: "linear-gradient(135deg,#9f2dc9,#3796da)",
                       fontWeight: "bold",
-                      fontSize: "1rem",
+                      fontSize: { xs: "0.98rem", md: "1.4rem" },
                       transition: "all 0.3s ease",
                       "&:hover": {
                         background: "linear-gradient(135deg,rgb(220, 133, 202),rgb(64, 197, 227))",
                         transform: "scale(1.03)",
+                        fontFamily: 'semiBold',
                       },
                     }}
                   >
@@ -241,7 +292,7 @@ const Contact = () => {
         <Alert
           severity="success"
           variant="filled"
-          sx={{ background: "#00c896", fontWeight: "bold" }}
+          sx={{ background: "#00c896", fontWeight: "bold" , fontFamily: 'semiBold', }}
         >
           Message sent successfully!
         </Alert>

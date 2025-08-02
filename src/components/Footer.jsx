@@ -33,19 +33,19 @@ const Footer = () => {
             fontWeight: 'bold',
           }}
         >
-          <MuiLink component={Link} to="/about-us" sx={{ color: '#fff', textDecoration: 'none' }}>
+          <MuiLink component={Link} to="/about-us" sx={{ color: '#fff', textDecoration: 'none', fontFamily: 'semiBold', fontSize: { xs: "1.3rem", md: "1.8rem" }, }}>
             About Us      |
           </MuiLink>
-          <MuiLink component={Link} to="/terms-and-conditions" sx={{ color: '#fff', textDecoration: 'none' }}>
+          <MuiLink component={Link} to="/terms-and-conditions" sx={{ color: '#fff', textDecoration: 'none', fontFamily: 'semiBold', fontSize: { xs: "1.3rem", md: "1.8rem" }, }}>
             Terms & Conditions |
           </MuiLink>
-          <MuiLink component={Link} to="/cancellation-and-refund" sx={{ color: '#fff', textDecoration: 'none' }}>
+          <MuiLink component={Link} to="/cancellation-and-refund" sx={{ color: '#fff', textDecoration: 'none', fontFamily: 'semiBold', fontSize: { xs: "1.3rem", md: "1.8rem" }, }}>
             Cancellation & Refund
           </MuiLink>
         </Stack>
 
         {/* Copyright */}
-        <Typography variant="body2" sx={{ color: '#e0e0e0', fontSize: '0.9rem' }}>
+        <Typography variant="body2" sx={{ color: '#f3e8e8ff', fontFamily: 'Robot', fontSize: { xs: "1.3rem", md: "1.6rem" }, }}>
           © {new Date().getFullYear()} YourCompanyName. All rights reserved.
         </Typography>
         

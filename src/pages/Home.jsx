@@ -137,6 +137,8 @@ const Home = () => {
           py: 1.5,
           fontWeight: "bold",
           alignSelf: { xs: "center", md: "flex-start" },
+          fontFamily: 'semiBold',
+           fontSize: { xs: "0.65rem", md: "1.2rem" },
         }}
       >
         Get Started

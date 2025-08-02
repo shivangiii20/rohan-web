@@ -199,14 +199,18 @@ const Portfolio = () => {
       >
         <Grid container spacing={3}>
           {[
-            "/images/portfolio/rect1.jpg",
-            "/images/portfolio/rect2.jpg",
-            "/images/portfolio/rect3.jpg",
-            "/images/portfolio/rect4.jpg",
-            "/images/portfolio/rect5.jpg",
-            "/images/portfolio/rect6.jpg",
-            "/images/portfolio/rect7.jpg",
-            "/images/portfolio/rect8.jpg",
+            "/images/pr1.png",
+            "/images/pr2.png",
+            "/images/pr3.png",
+            "/images/pr4.png",
+            "/images/pr5.png",
+            "/images/pr6.png",
+            "/images/pr7.png",
+            "/images/pr8.png",
+            "/images/pr9.png",
+            "/images/pr10.png",
+            "/images/pr11.png",
+            "/images/pr12.png",
           ].map((img, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <motion.div

@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import { useTheme } from '@mui/material/styles';
 import dmarketing from "../animation/dmarketing.json";
 import { motion } from "framer-motion";
+import ContactCardSection from "../components/ContactCardSection";
 import {
   Campaign,
   Insights,
@@ -749,6 +750,7 @@ const DigitalMarketing = () => {
           </Grid>
         </Container>
       </Box>
+      <ContactCardSection/>
     </>
   );
 };

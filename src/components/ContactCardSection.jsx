@@ -49,6 +49,7 @@ const ContactCardSection = () => {
           background: 'linear-gradient(135deg, #9f7aea, #63d2ff)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
+          fontFamily: 'semiBold',
         }}
       >
         Write Us a Message
@@ -59,13 +60,14 @@ const ContactCardSection = () => {
           {
             icon: <EmailIcon sx={{ fontSize: 40, color: '#fff' }} />,
             title: 'Email Us',
-            description: 'Reach us anytime via email',
+            description: 'Reach us anytime via email' ,
             contact: 'hello@example.com',
           },
           {
             icon: <PhoneIcon sx={{ fontSize: 40, color: '#fff' }} />,
             title: 'Call Us',
-            description: "We're available 9am – 7pm",
+            description: "We're available 9am – 7pm" ,
+            
             contact: '+91 98765 43210',
           },
         ].map((item, idx) => (
@@ -73,8 +75,11 @@ const ContactCardSection = () => {
             <Card
               elevation={6}
               sx={{
-                height: 180,
+                // height: 180,
+                minHeight: 250, // Allow more room for text
                 borderRadius: 4,
+                flexDirection: 'column',
+    justifyContent: 'space-between',
                 background: isDark
                   ? 'linear-gradient(135deg, #1e293b, #334155)'
                   : 'linear-gradient(135deg, #dbeafe, #e0f2fe)',
@@ -87,7 +92,7 @@ const ContactCardSection = () => {
                 },
               }}
             >
-              <CardContent>
+              <CardContent  sx={{ flexGrow: 1, overflow: 'visible' }}>
                 <Box
                   sx={{
                     display: 'flex',
@@ -112,12 +117,13 @@ const ContactCardSection = () => {
                 </Box>
                 <Typography
                   variant="h6"
-                  fontWeight="bold"
                   gutterBottom
                   sx={{
                     background: 'linear-gradient(135deg, #9f7aea, #63d2ff)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    fontFamily: 'semiBold',
+                     fontSize: { xs: "1rem", md: "1.4rem" },
                   }}
                 >
                   {item.title}
@@ -126,10 +132,13 @@ const ContactCardSection = () => {
                   variant="body2"
                   color={isDark ? '#cbd5e1' : 'text.secondary'}
                   gutterBottom
+                  sx={{fontFamily: 'Robot',  fontSize: { xs: "0.85rem", md: "1.6rem" },}}
                 >
                   {item.description}
                 </Typography>
-
+                
+                
+              
                 <Box
                   sx={{
                     display: 'flex',
@@ -140,8 +149,8 @@ const ContactCardSection = () => {
                 >
                   <Typography
                     variant="subtitle1"
-                    fontWeight="bold"
-                    sx={{ mr: 1 }}
+      
+                    sx={{ mr: 1, fontFamily: 'Robot', fontSize: { xs: "0.85rem", md: "1.5rem" },  }}
                   >
                     {item.contact}
                   </Typography>

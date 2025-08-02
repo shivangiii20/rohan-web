@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import ecommerce from "../animation/ecommerce.json";
 import ewebsite from "../animation/ewebsite.json";
 import { motion } from "framer-motion";
+import ContactCardSection from "../components/ContactCardSection";
 
 const EcommerceWeb = () => {
   const theme = useTheme();
@@ -740,6 +741,7 @@ const EcommerceWeb = () => {
           </Grid>
         </Container>
       </Box>
+      <ContactCardSection/>
     </>
   );
 };

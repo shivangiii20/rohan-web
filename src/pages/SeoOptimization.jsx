@@ -4,6 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import seopoints from "../animation/seopoints.json";
+import ContactCardSection from "../components/ContactCardSection";
 import {
   Search,
   Group,
@@ -798,6 +799,7 @@ const SeoOptimization = () => {
           </Grid>
         </Container>
       </Box>
+      <ContactCardSection/>
     </>
   );
 };
