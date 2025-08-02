@@ -40,7 +40,7 @@ Our mission? To craft software with soul. Where every line of code serves a purp
     img: "/images/vision.png",
   },
   {
-    title: "Our Core Values",
+    title: "Our Core Values:",
     text: `At RS Web Solutions, our work is guided by four fundamental pillars:
 Integrity, Innovation, Collaboration & Excellence.
 Every project reflects our commitment to ethical practices, creative problem-solving, teamwork, and uncompromising quality.
@@ -107,9 +107,9 @@ const AboutUs = () => {
               sx={{
                 mt: 2,
                 color: "#fff",
-                fontSize: { xs: "1rem", md: "1.2rem" },
                 maxWidth: 600,
-                fontFamily: 'bitterMedium'
+                fontFamily: 'Robot',
+                fontSize: { xs: "1rem", md: "1.4rem" },
               }}
             >
               We are a full-stack digital agency that believes being a favorite
@@ -184,7 +184,7 @@ const AboutUs = () => {
                   >
                     <Typography variant="h5" fontWeight="bold" gutterBottom
                     sx={{
-    color: isDark ? "#ffffff" : "#111111",
+    color: isDark ? "#ffffff" : "#111111", fontFamily: 'semiBold', fontSize: { xs: "1.5rem", md: "1.8rem" },
   }}
                     >
                       {section.title}
@@ -194,8 +194,9 @@ const AboutUs = () => {
   sx={{
     color: isDark ? "#dddddd" : "text.secondary",
     lineHeight: 1.9,
-    fontSize: { xs: "1rem", md: "1.125rem" },
+    fontSize: { xs: "1rem", md: "1.3rem" },
     letterSpacing: 0.2,
+    fontFamily: 'Robot',
   }}
 >
   {section.text}
@@ -294,10 +295,10 @@ const AboutUs = () => {
                       }}
                     >
                       <Box mb={2}>{item.icon}</Box>
-                      <Typography variant="h6" fontWeight="bold" color="#fff">
+                      <Typography variant="h6" fontWeight="bold" color="#fff" sx={{fontFamily: 'semiBold', fontSize: { xs: "1.2rem", md: "1.6rem" },}}>
                         {item.title}
                       </Typography>
-                      <Typography variant="body2" color="#f0f0f0" mt={1}>
+                      <Typography variant="body2" color="#f0f0f0" mt={1} sx={{fontFamily: 'semiBold', fontSize: { xs: "1rem", md: "1.6rem" },}}>
                         {item.text}
                       </Typography>
                     </Box>
